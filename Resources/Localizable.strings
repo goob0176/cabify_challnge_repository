@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CabifyChallenge
+
+  Created by Andrey Khlopotin on 31.01.2023.
+  
+*/
+
+"INVALID_URL_ERROR_MSG" = "Seems like the url is wrong";
+"SERVER_ERROR_MSG" = "Seems like there is something wrong with the server";

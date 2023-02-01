@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ProductModel: Decodable {
+struct ProductModel: Decodable, Equatable {
     let code: String?
     let name: String?
-    let price: Int?
+    let price: Float?
 }

@@ -11,18 +11,16 @@ import XCTest
 final class ProductModelTest: XCTestCase {
     func testModelBasicInitialization() {
         let product = ProductModel(
-            code: "VOUCHER",
-            name: "Cabify Voucher",
-            price: 5
+            code: "MUG",
+            name: "Cabify Coffee Mug",
+            price: 7.5
         )
         
-        XCTAssertNotNil(product.code)
-        XCTAssertNotNil(product.name)
-        XCTAssertNotNil(product.price)
+        assertPropertiesAreNotNil(product)
         
-        XCTAssertEqual(product.code, "VOUCHER")
-        XCTAssertEqual(product.name, "Cabify Voucher")
-        XCTAssertEqual(product.price, 5)
+        XCTAssertEqual(product.code, "MUG")
+        XCTAssertEqual(product.name, "Cabify Coffee Mug")
+        XCTAssertEqual(product.price, 7.5)
     }
     
     func testModelCorrectDecoding() {
@@ -41,9 +39,7 @@ final class ProductModelTest: XCTestCase {
         do {
             let product = try decoder.decode(ProductModel.self, from: data)
             
-            XCTAssertNotNil(product.code)
-            XCTAssertNotNil(product.name)
-            XCTAssertNotNil(product.price)
+            assertPropertiesAreNotNil(product)
             
             XCTAssertEqual(product.code, "TSHIRT")
             XCTAssertEqual(product.name, "Cabify T-Shirt")
@@ -51,5 +47,11 @@ final class ProductModelTest: XCTestCase {
         } catch {
             XCTFail(error.localizedDescription)
         }
+    }
+    
+    private func assertPropertiesAreNotNil(_ product: ProductModel) {
+        XCTAssertNotNil(product.code)
+        XCTAssertNotNil(product.name)
+        XCTAssertNotNil(product.price)
     }
 }
