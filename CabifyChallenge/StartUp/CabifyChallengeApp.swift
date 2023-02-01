@@ -11,7 +11,9 @@ import SwiftUI
 struct CabifyChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CatalogueView(
+                viewModel: ViewModelsFactory.catalogueViewModel()
+            )
         }
     }
 }

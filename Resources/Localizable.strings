@@ -8,3 +8,6 @@
 
 "INVALID_URL_ERROR_MSG" = "Seems like the url is wrong";
 "SERVER_ERROR_MSG" = "Seems like there is something wrong with the server";
+
+"PRODUCTS_LOADING_MSG" = "Awesome products are on their way!";
+"PRODUCTS_LOADING_HEADER_EMG" = "😎";

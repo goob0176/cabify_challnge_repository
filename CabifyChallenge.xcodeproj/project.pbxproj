@@ -18,8 +18,12 @@
 		B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF86298972B2003C4099 /* CatalogueScreenViewModelTests.swift */; };
 		B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF8929897496003C4099 /* CatalogueScreenType.swift */; };
 		B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF8C29897657003C4099 /* CatalogueScreenViewModel.swift */; };
+		B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF91298A95F1003C4099 /* ViewModelsFactory.swift */; };
+		B76DAF95298A980E003C4099 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF94298A980E003C4099 /* Color+Ex.swift */; };
+		B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */; };
+		B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */; };
 		B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */; };
-		B77A2D5A2987F380006FF457 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D592987F380006FF457 /* ContentView.swift */; };
+		B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D592987F380006FF457 /* CatalogueView.swift */; };
 		B77A2D5C2987F381006FF457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77A2D5B2987F381006FF457 /* Assets.xcassets */; };
 		B77A2D5F2987F381006FF457 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77A2D5E2987F381006FF457 /* Preview Assets.xcassets */; };
 		B77A2D692987F382006FF457 /* ProductModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D682987F382006FF457 /* ProductModelTests.swift */; };
@@ -57,9 +61,13 @@
 		B76DAF86298972B2003C4099 /* CatalogueScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreenViewModelTests.swift; sourceTree = "<group>"; };
 		B76DAF8929897496003C4099 /* CatalogueScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreenType.swift; sourceTree = "<group>"; };
 		B76DAF8C29897657003C4099 /* CatalogueScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreenViewModel.swift; sourceTree = "<group>"; };
+		B76DAF91298A95F1003C4099 /* ViewModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsFactory.swift; sourceTree = "<group>"; };
+		B76DAF94298A980E003C4099 /* Color+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
+		B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueLoadingView.swift; sourceTree = "<group>"; };
+		B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		B77A2D542987F380006FF457 /* CabifyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabifyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyChallengeApp.swift; sourceTree = "<group>"; };
-		B77A2D592987F380006FF457 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B77A2D592987F380006FF457 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
 		B77A2D5B2987F381006FF457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B77A2D5E2987F381006FF457 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B77A2D642987F382006FF457 /* CabifyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CabifyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +114,9 @@
 		B76DAF7129891DE3003C4099 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B77A2D592987F380006FF457 /* ContentView.swift */,
+				B77A2D592987F380006FF457 /* CatalogueView.swift */,
+				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
+				B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -159,9 +169,18 @@
 		B76DAF90298990DC003C4099 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B76DAF94298A980E003C4099 /* Color+Ex.swift */,
 				B76DAF84298970CB003C4099 /* Localization.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B76DAF93298A95F9003C4099 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF91298A95F1003C4099 /* ViewModelsFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		B77A2D4B2987F380006FF457 = {
@@ -195,6 +214,7 @@
 				B76DAF8B2989762B003C4099 /* ViewModels */,
 				B76DAF90298990DC003C4099 /* Utils */,
 				B77A2D5D2987F381006FF457 /* Preview Content */,
+				B76DAF93298A95F9003C4099 /* Factories */,
 			);
 			path = CabifyChallenge;
 			sourceTree = "<group>";
@@ -374,13 +394,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76DAF95298A980E003C4099 /* Color+Ex.swift in Sources */,
 				B76DAF7729891FC5003C4099 /* NetworkService.swift in Sources */,
 				B76DAF8029896513003C4099 /* NetworkError.swift in Sources */,
 				B76DAF7B2989374A003C4099 /* CatalogueModel.swift in Sources */,
 				B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */,
-				B77A2D5A2987F380006FF457 /* ContentView.swift in Sources */,
+				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
+				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
 				B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */,
+				B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */,
 				B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */,
+				B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */,
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
 				B76DAF85298970CB003C4099 /* Localization.swift in Sources */,
 				B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */,
@@ -551,8 +575,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,9 +585,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -581,8 +608,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,9 +618,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

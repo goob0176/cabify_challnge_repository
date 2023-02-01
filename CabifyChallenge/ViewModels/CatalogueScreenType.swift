@@ -14,7 +14,7 @@ enum CatalogueScreenState {
     case error(error: NetworkError)
 }
 
-protocol CatalogueScreenType: AnyObject {
+protocol CatalogueScreenType: AnyObject, ObservableObject {
     var screenState: CatalogueScreenState { get set }
     func getProducts()
 }
