@@ -6,14 +6,14 @@
 //
 
 import SnapshotTesting
+import SwiftUI
 import XCTest
 
 @testable import CabifyChallenge
 
 class CatalogueErrorViewSnapshotTests: XCTestCase {
-  func testMyViewController() {
-      let errorView = CatalogueErrorView(errorMessage: "Something went wrong", refreshAction: {})
-
-    assertSnapshot(matching: errorView, as: .image)
+  func testErrorView() {
+      let errorView =  UIHostingController(rootView: CatalogueErrorView(errorMessage: "Something went wrong", refreshAction: {}))
+      assertSnapshot(matching: errorView, as: .image)
   }
 }

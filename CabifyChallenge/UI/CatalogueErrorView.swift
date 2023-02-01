@@ -19,9 +19,6 @@ struct CatalogueErrorView: View {
         self.refreshAction = refreshAction
     }
     
-    @State
-    private var animateOpacity = false
-    
     var body: some View {
         ZStack {
             Color.errorColor
@@ -59,12 +56,6 @@ struct CatalogueErrorView: View {
             }
         }
         .ignoresSafeArea()
-        .opacity(animateOpacity ? 1.0 : 0.0)
-        .onAppear {
-            withAnimation {
-                animateOpacity = true
-            }
-        }
     }
 }
 

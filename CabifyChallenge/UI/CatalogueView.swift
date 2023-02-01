@@ -17,19 +17,25 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
     
     @ViewBuilder
     var body: some View {
-        switch viewModel.screenState {
-        case .loading:
-            CatalogueLoadingView()
-                .onAppear {
-                    viewModel.getProducts()
+        Group {
+            switch viewModel.screenState {
+            case .loading:
+                AnimatableOpacityContainerView {
+                    CatalogueLoadingView()
                 }
-        case .loadedCatalogue(catalogueModel: let catalogueModel):
-            Text(catalogueModel.products?.first?.name ?? "")
-        case .error(error: let error):
-            CatalogueErrorView(
-                errorMessage: error.localizedDescription,
-                refreshAction: viewModel.getProducts
-            )
+            case .loadedCatalogue(catalogueModel: let catalogueModel):
+                Text(catalogueModel.products?.first?.name ?? "")
+            case .error(error: let error):
+                AnimatableOpacityContainerView {
+                    CatalogueErrorView(
+                        errorMessage: error.localizedDescription,
+                        refreshAction: viewModel.getProducts
+                    )
+                }
+            }
+        }
+        .onAppear {
+            viewModel.getProducts()
         }
     }
 }

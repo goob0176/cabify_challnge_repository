@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */; };
 		B7419749298AE440004F38F9 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7419748298AE440004F38F9 /* SnapshotTesting */; };
+		B741974F298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */; };
 		B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */; };
 		B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */; };
 		B76DAF7729891FC5003C4099 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7629891FC5003C4099 /* NetworkService.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueErrorViewSnapshotTests.swift; sourceTree = "<group>"; };
+		B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableOpacityContainerView.swift; sourceTree = "<group>"; };
 		B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		B76DAF7629891FC5003C4099 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -127,6 +129,13 @@
 			path = CatalogueViews;
 			sourceTree = "<group>";
 		};
+		B741974B298AEAC6004F38F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B76DAF7029891DC7003C4099 /* StartUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +151,7 @@
 				B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */,
 				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
 				B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */,
+				B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -217,6 +227,7 @@
 				B77A2D672987F382006FF457 /* CabifyChallengeTests */,
 				B77A2D712987F382006FF457 /* CabifyChallengeUITests */,
 				B77A2D552987F380006FF457 /* Products */,
+				B741974B298AEAC6004F38F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,6 +445,7 @@
 				B76DAF8029896513003C4099 /* NetworkError.swift in Sources */,
 				B76DAF7B2989374A003C4099 /* CatalogueModel.swift in Sources */,
 				B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */,
+				B741974F298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift in Sources */,
 				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
 				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
 				B76DAF9B298AAB9E003C4099 /* CatalogueErrorView.swift in Sources */,
