@@ -8,12 +8,27 @@
 import Foundation
 import Combine
 
+fileprivate struct Constants {
+    static let baseUrl = "https://gist.githubusercontent.com"
+    static let parameters = "palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887"
+    static let file = "Products.json"
+}
+
 class CatalogueScreenViewModel: CatalogueScreenType, ObservableObject {
     private let dataService: DataService
     private var cancellables = Set<AnyCancellable>()
     
+    private var url: String {
+        [
+            Constants.baseUrl,
+            Constants.parameters,
+            Constants.file
+        ]
+            .joined(separator: "/")
+    }
+    
     private var cataloguePublisger: AnyPublisher<CatalogueModel, NetworkError> {
-        dataService.request("")
+        dataService.request(url)
     }
     
     @Published
@@ -24,6 +39,7 @@ class CatalogueScreenViewModel: CatalogueScreenType, ObservableObject {
     }
     
     func getProducts() {
+        screenState = .loading
         cataloguePublisger
             .sink { [weak self] result in
                 switch result {

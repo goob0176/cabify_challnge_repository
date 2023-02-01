@@ -22,6 +22,8 @@
 		B76DAF95298A980E003C4099 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF94298A980E003C4099 /* Color+Ex.swift */; };
 		B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */; };
 		B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */; };
+		B76DAF9B298AAB9E003C4099 /* CatalogueErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */; };
+		B76DAF9D298AB62B003C4099 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */; };
 		B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */; };
 		B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D592987F380006FF457 /* CatalogueView.swift */; };
 		B77A2D5C2987F381006FF457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77A2D5B2987F381006FF457 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		B76DAF94298A980E003C4099 /* Color+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
 		B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueLoadingView.swift; sourceTree = "<group>"; };
 		B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueErrorView.swift; sourceTree = "<group>"; };
+		B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		B77A2D542987F380006FF457 /* CabifyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabifyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyChallengeApp.swift; sourceTree = "<group>"; };
 		B77A2D592987F380006FF457 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B77A2D592987F380006FF457 /* CatalogueView.swift */,
+				B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */,
 				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
 				B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */,
 			);
@@ -135,6 +140,7 @@
 			children = (
 				B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */,
 				B76DAF7629891FC5003C4099 /* NetworkService.swift */,
+				B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */,
 				B76DAF7F29896513003C4099 /* NetworkError.swift */,
 			);
 			path = Services;
@@ -401,6 +407,8 @@
 				B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */,
 				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
 				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
+				B76DAF9B298AAB9E003C4099 /* CatalogueErrorView.swift in Sources */,
+				B76DAF9D298AB62B003C4099 /* MockNetworkService.swift in Sources */,
 				B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */,
 				B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */,
 				B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */,

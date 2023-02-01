@@ -20,16 +20,26 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
         switch viewModel.screenState {
         case .loading:
             CatalogueLoadingView()
+                .onAppear {
+                    viewModel.getProducts()
+                }
         case .loadedCatalogue(catalogueModel: let catalogueModel):
-             EmptyView()
+            Text(catalogueModel.products?.first?.name ?? "")
         case .error(error: let error):
-             EmptyView()
+            CatalogueErrorView(
+                errorMessage: error.localizedDescription,
+                refreshAction: viewModel.getProducts
+            )
         }
     }
 }
 
 struct CatalogueViewPreviews: PreviewProvider {
     static var previews: some View {
-        CatalogueView(viewModel: ViewModelsFactory.catalogueViewModel())
+        CatalogueView(
+            viewModel: ViewModelsFactory.catalogueViewModel(
+                NetworkServiceMock(shouldFail: false)
+            )
+        )
     }
 }

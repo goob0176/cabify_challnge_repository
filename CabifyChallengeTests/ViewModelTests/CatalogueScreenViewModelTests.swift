@@ -19,29 +19,6 @@ fileprivate struct MockConstants {
     ])
 }
 
-// MARK: - Mocks
-
-final class NetworkServiceMock: DataService {
-    private var shouldFail: Bool
-    
-    init(shouldFail: Bool) {
-        self.shouldFail = shouldFail
-    }
-    
-    func request<Output>(_ url: String) -> AnyPublisher<Output, CabifyChallenge.NetworkError> where Output : Decodable {
-         Just(MockConstants.catalogueModel)
-            .tryMap({ model in
-                guard !shouldFail,
-                      let output = model as? Output else {
-                    throw NetworkError.serverError
-                }
-                return output
-            })
-            .mapError { _ in NetworkError.serverError }
-            .eraseToAnyPublisher()
-    }
-}
-
 // MARK: - Tests
 
 final class CatalogueScreenViewModelTest: XCTestCase {

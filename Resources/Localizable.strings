@@ -10,4 +10,8 @@
 "SERVER_ERROR_MSG" = "Seems like there is something wrong with the server";
 
 "PRODUCTS_LOADING_MSG" = "Awesome products are on their way!";
+"PRODUCTS_ERROR_HEADER" = "Oops...";
+"ERROR_BUTTON_TITLE" = "Try again";
+
 "PRODUCTS_LOADING_HEADER_EMG" = "😎";
+"PRODUCTS_ERROR_EMG" = "🤒";

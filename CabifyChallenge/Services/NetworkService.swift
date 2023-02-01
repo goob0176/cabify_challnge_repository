@@ -16,6 +16,9 @@ struct NetworkService: DataService {
         }
         return URLSession.shared
             .dataTaskPublisher(for: url)
+            .timeout(.seconds(10.0), scheduler: DispatchQueue.main, customError: {
+                URLError(.timedOut)
+            })
             .tryMap({ output in
                 guard let httpResponce = output.response as? HTTPURLResponse,
                       httpResponce.statusCode == 200 else {
@@ -24,6 +27,7 @@ struct NetworkService: DataService {
                 return output.data
             })
             .decode(type: Output.self, decoder: JSONDecoder())
+            .compactMap { $0 }
             .mapError({ error in
                 guard let error = error as? NetworkError else {
                     return NetworkError.dataReceivingError(description: error.localizedDescription)

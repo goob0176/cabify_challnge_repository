@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CatalogueLoadingView: View {
+    @State
+    private var animateOpacity = false
+    
     var body: some View {
         ZStack {
             Color.primaryColor
@@ -24,6 +27,12 @@ struct CatalogueLoadingView: View {
             }
         }
         .ignoresSafeArea()
+        .opacity(animateOpacity ? 1.0 : 0.0)
+        .onAppear {
+            withAnimation {
+                animateOpacity = true
+            }
+        }
     }
 }
 

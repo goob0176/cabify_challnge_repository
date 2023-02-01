@@ -12,6 +12,9 @@ struct Localization {
     static let serverErrorMsg = "SERVER_ERROR_MSG".localized
     static let productsLoadingMsg = "PRODUCTS_LOADING_MSG".localized
     static let productsLoadingHeaderEmg = "PRODUCTS_LOADING_HEADER_EMG".localized
+    static let productsErrorEmg = "PRODUCTS_ERROR_EMG".localized
+    static let productsErrorHeader = "PRODUCTS_ERROR_HEADER".localized
+    static let errorButtonTitle = "ERROR_BUTTON_TITLE".localized
 }
 
 private extension String {
