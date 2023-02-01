@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ad99819ba31fe4f1006b1a38ffbfcf4aae2fb901"
+      }
+    }
+  ],
+  "version" : 2
+}

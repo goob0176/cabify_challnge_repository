@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */; };
+		B7419749298AE440004F38F9 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7419748298AE440004F38F9 /* SnapshotTesting */; };
 		B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */; };
 		B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */; };
 		B76DAF7729891FC5003C4099 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7629891FC5003C4099 /* NetworkService.swift */; };
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueErrorViewSnapshotTests.swift; sourceTree = "<group>"; };
 		B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		B76DAF7629891FC5003C4099 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7419749298AE440004F38F9 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +111,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7419746298AE111004F38F9 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				B741974A298AE4CD004F38F9 /* CatalogueViews */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		B741974A298AE4CD004F38F9 /* CatalogueViews */ = {
+			isa = PBXGroup;
+			children = (
+				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
+			);
+			path = CatalogueViews;
+			sourceTree = "<group>";
+		};
 		B76DAF7029891DC7003C4099 /* StartUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +259,7 @@
 				B77A2D842988083A006FF457 /* ServicesTest */,
 				B77A2D832988082F006FF457 /* ModelTests */,
 				B76DAF88298972B8003C4099 /* ViewModelTests */,
+				B7419746298AE111004F38F9 /* SnapshotTests */,
 			);
 			path = CabifyChallengeTests;
 			sourceTree = "<group>";
@@ -285,6 +306,8 @@
 			dependencies = (
 			);
 			name = CabifyChallenge;
+			packageProductDependencies = (
+			);
 			productName = CabifyChallenge;
 			productReference = B77A2D542987F380006FF457 /* CabifyChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +326,9 @@
 				B77A2D662987F382006FF457 /* PBXTargetDependency */,
 			);
 			name = CabifyChallengeTests;
+			packageProductDependencies = (
+				B7419748298AE440004F38F9 /* SnapshotTesting */,
+			);
 			productName = CabifyChallengeTests;
 			productReference = B77A2D642987F382006FF457 /* CabifyChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -357,6 +383,9 @@
 				Base,
 			);
 			mainGroup = B77A2D4B2987F380006FF457;
+			packageReferences = (
+				B7419747298AE440004F38F9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = B77A2D552987F380006FF457 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -426,6 +455,7 @@
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
 				B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */,
+				B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */,
 				B77A2D692987F382006FF457 /* ProductModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,9 +678,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CabifyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CabifyChallenge";
 			};
 			name = Debug;
@@ -668,9 +701,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CabifyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CabifyChallenge";
 			};
 			name = Release;
@@ -687,9 +723,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = CabifyChallenge;
 			};
 			name = Debug;
@@ -706,9 +745,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.CabifyChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = CabifyChallenge;
 			};
 			name = Release;
@@ -753,6 +795,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7419747298AE440004F38F9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7419748298AE440004F38F9 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7419747298AE440004F38F9 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B77A2D4C2987F380006FF457 /* Project object */;
 }
