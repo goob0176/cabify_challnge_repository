@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct LoadingIndicator: View {
-    var color: Color = .white
+    private var color: Color
     
     @State
-    private var isLoading = false
+    private var isLoading: Bool
+    
+    init(color: Color = .white, isLoading: Bool = true) {
+        self.color = color
+        self.isLoading = isLoading
+    }
     
     var body: some View {
         Circle()
