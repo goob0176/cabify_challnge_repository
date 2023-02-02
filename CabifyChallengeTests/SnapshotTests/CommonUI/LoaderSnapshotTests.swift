@@ -13,11 +13,15 @@ import XCTest
 
 class LoaderSnapshotTests: XCTestCase {
     func testLoader() {
-        let loadingView =  UIHostingController(rootView: LoadingIndicator(color: .blue, isLoading: false))
+        let loadingView =  UIHostingController(
+            rootView: LoadingIndicator(
+                color: .blue,
+                isLoading: false
+            )
+        )
         assertSnapshot(
             matching: loadingView,
-            as: .image(on: .iPhone8, size: loadingView.view.intrinsicContentSize),
-            named: "Loader_iPhone8"
+            as: .image(on: .iPhone8, size: loadingView.view.intrinsicContentSize)
         )
     }
 }

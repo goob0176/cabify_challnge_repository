@@ -9,11 +9,15 @@ import SwiftUI
 
 struct LoadingIndicator: View {
     private var color: Color
-    
-    @State
     private var isLoading: Bool
     
-    init(color: Color = .white, isLoading: Bool = true) {
+    @State
+    private var shouldAnimate: Bool = false
+    
+    init(
+        color: Color = .white,
+        isLoading: Bool
+    ) {
         self.color = color
         self.isLoading = isLoading
     }
@@ -23,20 +27,24 @@ struct LoadingIndicator: View {
             .trim(from: 0, to: 0.65)
             .stroke(color, lineWidth: 10.0)
             .frame(width: 75.0, height: 75.0)
-            .rotationEffect(Angle(degrees: isLoading ? 0 : 360.0))
-            .animation(
-                Animation.linear(duration: 1.0)
-                    .repeatForever(autoreverses: false),
-                value: isLoading
+            .rotationEffect(
+                Angle(degrees: shouldAnimate ? 0 : 360.0)
             )
             .onAppear {
-                isLoading.toggle()
+                withAnimation(
+                    .linear(duration:1.0).repeatForever(autoreverses: false)
+                ) {
+                    shouldAnimate = isLoading
+                }
             }
     }
 }
 
 struct LoadingIndicator_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingIndicator(color: .blue)
+        LoadingIndicator(
+            color: .blue,
+            isLoading: false
+        )
     }
 }

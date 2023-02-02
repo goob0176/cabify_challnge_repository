@@ -11,6 +11,7 @@
 		B7419749298AE440004F38F9 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B7419748298AE440004F38F9 /* SnapshotTesting */; };
 		B741974F298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */; };
 		B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7419755298BC005004F38F9 /* LoaderSnapshotTests.swift */; };
+		B7419758298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */; };
 		B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */; };
 		B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */; };
 		B76DAF7729891FC5003C4099 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76DAF7629891FC5003C4099 /* NetworkService.swift */; };
@@ -59,6 +60,7 @@
 		B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueErrorViewSnapshotTests.swift; sourceTree = "<group>"; };
 		B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableOpacityContainerView.swift; sourceTree = "<group>"; };
 		B7419755298BC005004F38F9 /* LoaderSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderSnapshotTests.swift; sourceTree = "<group>"; };
+		B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueLoadingViewSnapshotTests.swift; sourceTree = "<group>"; };
 		B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		B76DAF7629891FC5003C4099 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
+				B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */,
 			);
 			path = CatalogueViews;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
+				B7419758298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift in Sources */,
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
 				B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */,
 				B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */,

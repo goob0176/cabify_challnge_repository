@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct CatalogueLoadingView: View {
+    private let isLoading: Bool
+    
+    init(isLoading: Bool = true) {
+        self.isLoading = isLoading
+    }
+    
     var body: some View {
         ZStack {
             Color.primaryColor
             VStack(spacing: 100.0) {
-                LoadingIndicator()
+                LoadingIndicator(isLoading: isLoading)
                 VStack(alignment: .leading) {
                     Text(Localization.productsLoadingHeaderEmg)
                         .font(.system(size: 64))
@@ -29,6 +35,6 @@ struct CatalogueLoadingView: View {
 
 struct CatalogueLoadingViewPreviews: PreviewProvider {
     static var previews: some View {
-        CatalogueLoadingView()
+        CatalogueLoadingView(isLoading: false)
     }
 }
