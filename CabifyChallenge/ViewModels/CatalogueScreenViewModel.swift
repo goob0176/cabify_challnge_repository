@@ -8,11 +8,15 @@
 import Foundation
 import Combine
 
+// MARK: - Constants
+
 fileprivate struct Constants {
     static let baseUrl = "https://gist.githubusercontent.com"
     static let parameters = "palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887"
     static let file = "Products.json"
 }
+
+// MARK: - View Model
 
 class CatalogueScreenViewModel: CatalogueScreenType, ObservableObject {
     private let dataService: DataService
