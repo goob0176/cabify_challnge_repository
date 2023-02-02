@@ -14,6 +14,6 @@ import XCTest
 class CatalogueErrorViewSnapshotTests: XCTestCase {
   func testErrorView() {
       let errorView =  UIHostingController(rootView: CatalogueErrorView(errorMessage: "Something went wrong", refreshAction: {}))
-      assertSnapshot(matching: errorView, as: .image)
+      assertSnapshot(matching: errorView, as: .image(on: .iPhone13))
   }
 }
