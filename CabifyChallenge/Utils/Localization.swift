@@ -15,6 +15,8 @@ struct Localization {
     static let productsErrorEmg = "PRODUCTS_ERROR_EMG".localized
     static let productsErrorHeader = "PRODUCTS_ERROR_HEADER".localized
     static let errorButtonTitle = "ERROR_BUTTON_TITLE".localized
+    static let productsHeaderEmg = "PRODUCTS_HEADER_EMG".localized
+    static let catalogueProductsTitle = "CATALOGUE_PRODUCTS_TITLE".localized
 }
 
 private extension String {

@@ -16,12 +16,6 @@ fileprivate struct MockConstants {
     
     static let serverErrorUrl = "https://httpstat.us/500"
     static let systemErrorDescription = "The data couldn’t be read because it isn’t in the correct format."
-    
-    static let models = [
-        ProductModel(code: "VOUCHER", name: "Cabify Voucher", price: 5),
-        ProductModel(code: "TSHIRT", name: "Cabify T-Shirt", price: 20),
-        ProductModel(code: "MUG", name: "Cabify Coffee Mug", price: 7.5),
-    ]
 }
 
 // MARK: - Tests
@@ -50,7 +44,7 @@ final class NetworkServiceTest: XCTestCase {
         
         XCTAssertNotNil(responceModel)
         XCTAssertNotNil(responceModel?.products)
-        XCTAssertEqual(responceModel?.products, MockConstants.models)
+        XCTAssertEqual(responceModel?.products, MocksFactory.models())
     }
     
     func testResponceFromIvalidUrl() {

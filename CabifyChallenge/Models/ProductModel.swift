@@ -12,3 +12,9 @@ struct ProductModel: Decodable, Equatable {
     let name: String?
     let price: Float?
 }
+
+extension ProductModel: Identifiable {
+    var id: UUID {
+        UUID()
+    }
+}

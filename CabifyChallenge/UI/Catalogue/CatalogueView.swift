@@ -24,7 +24,9 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
                     CatalogueLoadingView()
                 }
             case .loadedCatalogue(catalogueModel: let catalogueModel):
-                Text(catalogueModel.products?.first?.name ?? "")
+                AnimatableOpacityContainerView {
+                    CatalogueProductsView(products: catalogueModel.products ?? [])
+                }
             case .error(error: let error):
                 AnimatableOpacityContainerView {
                     CatalogueErrorView(

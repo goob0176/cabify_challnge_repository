@@ -9,18 +9,6 @@ import XCTest
 import Combine
 @testable import CabifyChallenge
 
-// MARK: - Constants
-
-fileprivate struct MockConstants {
-    static let catalogueModel = CatalogueModel(products: [
-        ProductModel(code: "VOUCHER", name: "Cabify Voucher", price: 5),
-        ProductModel(code: "TSHIRT", name: "Cabify T-Shirt", price: 20),
-        ProductModel(code: "MUG", name: "Cabify Coffee Mug", price: 7.5),
-    ])
-}
-
-// MARK: - Tests
-
 final class CatalogueScreenViewModelTest: XCTestCase {
     func testViewModelIsInLoadingState() {
         let sut = CatalogueScreenViewModel(dataService: NetworkServiceMock(shouldFail: false))
@@ -39,7 +27,7 @@ final class CatalogueScreenViewModelTest: XCTestCase {
                 
         switch sut.screenState {
         case .loadedCatalogue(let catalogueModel):
-            XCTAssertEqual(catalogueModel, MockConstants.catalogueModel)
+            XCTAssertEqual(catalogueModel, CatalogueModel(products: MocksFactory.models()))
         default:
             XCTFail("Catalogue model should be loaded!")
         }

@@ -8,18 +8,6 @@
 import Foundation
 import Combine
 
-// MARK: - Constants
-
-fileprivate struct MockConstants {
-    static let catalogueModel = CatalogueModel(products: [
-        ProductModel(code: "VOUCHER", name: "Cabify Voucher", price: 5),
-        ProductModel(code: "TSHIRT", name: "Cabify T-Shirt", price: 20),
-        ProductModel(code: "MUG", name: "Cabify Coffee Mug", price: 7.5),
-    ])
-}
-
-// MARK: - Implementation
-
 final class NetworkServiceMock: DataService {
     private var shouldFail: Bool
     
@@ -28,7 +16,7 @@ final class NetworkServiceMock: DataService {
     }
     
     func request<Output>(_ url: String) -> AnyPublisher<Output, CabifyChallenge.NetworkError> where Output : Decodable {
-         Just(MockConstants.catalogueModel)
+        Just(CatalogueModel(products: MocksFactory.models()))
             .tryMap({ model in
                 guard !shouldFail,
                       let output = model as? Output else {

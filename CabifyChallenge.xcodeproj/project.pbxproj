@@ -38,6 +38,14 @@
 		B77A2D752987F382006FF457 /* CabifyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D742987F382006FF457 /* CabifyChallengeUITestsLaunchTests.swift */; };
 		B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D812987F3A4006FF457 /* ProductModel.swift */; };
 		B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868051298C04BD003819CA /* NetworkErrorTests.swift */; };
+		B7868054298C0749003819CA /* CatalogueProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868053298C0749003819CA /* CatalogueProductsView.swift */; };
+		B7868056298C08BD003819CA /* MocksFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868055298C08BD003819CA /* MocksFactory.swift */; };
+		B786805B298C1520003819CA /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786805A298C1520003819CA /* ProductRow.swift */; };
+		B7868060298C2E93003819CA /* ProductRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786805F298C2E93003819CA /* ProductRowViewModel.swift */; };
+		B7868063298C2EB4003819CA /* ProductRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868062298C2EB4003819CA /* ProductRowType.swift */; };
+		B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */; };
+		B7868069298D23AC003819CA /* PriceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868068298D23AC003819CA /* PriceControl.swift */; };
+		B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +99,14 @@
 		B77A2D742987F382006FF457 /* CabifyChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B77A2D812987F3A4006FF457 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		B7868051298C04BD003819CA /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		B7868053298C0749003819CA /* CatalogueProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueProductsView.swift; sourceTree = "<group>"; };
+		B7868055298C08BD003819CA /* MocksFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksFactory.swift; sourceTree = "<group>"; };
+		B786805A298C1520003819CA /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		B786805F298C2E93003819CA /* ProductRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModel.swift; sourceTree = "<group>"; };
+		B7868062298C2EB4003819CA /* ProductRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowType.swift; sourceTree = "<group>"; };
+		B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModelTests.swift; sourceTree = "<group>"; };
+		B7868068298D23AC003819CA /* PriceControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControl.swift; sourceTree = "<group>"; };
+		B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControlSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,7 @@
 			children = (
 				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
 				B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */,
+				B786806D298D3889003819CA /* ControlsTests */,
 			);
 			path = CatalogueViews;
 			sourceTree = "<group>";
@@ -163,11 +180,8 @@
 		B76DAF7129891DE3003C4099 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B77A2D592987F380006FF457 /* CatalogueView.swift */,
-				B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */,
-				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
-				B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */,
-				B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */,
+				B7868058298C14CF003819CA /* Catalogue */,
+				B7868057298C14BE003819CA /* CommonUI */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -205,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				B76DAF86298972B2003C4099 /* CatalogueScreenViewModelTests.swift */,
+				B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -212,8 +227,7 @@
 		B76DAF8B2989762B003C4099 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B76DAF8929897496003C4099 /* CatalogueScreenType.swift */,
-				B76DAF8C29897657003C4099 /* CatalogueScreenViewModel.swift */,
+				B786805D298C2E32003819CA /* Catalogue */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -231,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				B76DAF91298A95F1003C4099 /* ViewModelsFactory.swift */,
+				B7868055298C08BD003819CA /* MocksFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -316,6 +331,79 @@
 				B7868051298C04BD003819CA /* NetworkErrorTests.swift */,
 			);
 			path = ServicesTest;
+			sourceTree = "<group>";
+		};
+		B7868057298C14BE003819CA /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF98298A9F73003C4099 /* LoadingIndicator.swift */,
+				B741974E298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		B7868058298C14CF003819CA /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				B77A2D592987F380006FF457 /* CatalogueView.swift */,
+				B7868053298C0749003819CA /* CatalogueProductsView.swift */,
+				B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */,
+				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
+				B786805C298C1525003819CA /* Rows */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		B786805C298C1525003819CA /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				B786805A298C1520003819CA /* ProductRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		B786805D298C2E32003819CA /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				B786805E298C2E3D003819CA /* Screens */,
+				B7868061298C2E9D003819CA /* Rows */,
+				B786806A298D23B0003819CA /* PriceControl */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		B786805E298C2E3D003819CA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF8929897496003C4099 /* CatalogueScreenType.swift */,
+				B76DAF8C29897657003C4099 /* CatalogueScreenViewModel.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B7868061298C2E9D003819CA /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				B786805F298C2E93003819CA /* ProductRowViewModel.swift */,
+				B7868062298C2EB4003819CA /* ProductRowType.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		B786806A298D23B0003819CA /* PriceControl */ = {
+			isa = PBXGroup;
+			children = (
+				B7868068298D23AC003819CA /* PriceControl.swift */,
+			);
+			path = PriceControl;
+			sourceTree = "<group>";
+		};
+		B786806D298D3889003819CA /* ControlsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */,
+			);
+			path = ControlsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,17 +550,23 @@
 				B76DAF8029896513003C4099 /* NetworkError.swift in Sources */,
 				B76DAF7B2989374A003C4099 /* CatalogueModel.swift in Sources */,
 				B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */,
+				B7868056298C08BD003819CA /* MocksFactory.swift in Sources */,
 				B741974F298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift in Sources */,
+				B7868054298C0749003819CA /* CatalogueProductsView.swift in Sources */,
 				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
+				B7868060298C2E93003819CA /* ProductRowViewModel.swift in Sources */,
 				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
 				B76DAF9B298AAB9E003C4099 /* CatalogueErrorView.swift in Sources */,
 				B76DAF9D298AB62B003C4099 /* MockNetworkService.swift in Sources */,
+				B786805B298C1520003819CA /* ProductRow.swift in Sources */,
 				B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */,
 				B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */,
+				B7868063298C2EB4003819CA /* ProductRowType.swift in Sources */,
 				B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */,
 				B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */,
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
 				B76DAF85298970CB003C4099 /* Localization.swift in Sources */,
+				B7868069298D23AC003819CA /* PriceControl.swift in Sources */,
 				B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,8 +577,10 @@
 			files = (
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */,
+				B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */,
 				B7419758298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift in Sources */,
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
+				B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */,
 				B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */,
 				B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */,
 				B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */,
