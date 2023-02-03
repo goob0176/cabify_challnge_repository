@@ -8,15 +8,22 @@
 import Foundation
 
 struct ProductRowViewModel: ProductRowType {
-    let code: String?
-    let name: String?
-    let price: String?
+    private let product: ProductModel
+    private let priceFormatter: PriceFormatterType
     
-    static func from(_ product: ProductModel) -> ProductRowViewModel {
-        .init(
-            code: product.code,
-            name: product.name,
-            price: "\(Int(product.price ?? 0.0)) €"
-        )
+    var title: String {
+        product.name ?? ""
+    }
+    
+    var formattedPrice: String {
+        priceFormatter.format(product.price) ?? ""
+    }
+    
+    init(
+        product: ProductModel,
+        priceFormatter: PriceFormatterType = PriceFormatter()
+    ) {
+        self.product = product
+        self.priceFormatter = priceFormatter
     }
 }

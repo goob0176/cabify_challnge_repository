@@ -21,7 +21,11 @@ struct CatalogueProductsView: View {
                     .frame(height: 16.0)
                 VStack(alignment: .leading) {
                     ForEach(products) { item in
-                        ProductRow(viewModel: ProductRowViewModel.from(item))
+                        ProductRow(
+                            viewModel: ProductRowViewModel(
+                                product: item
+                            )
+                        )
                     }
                 }
                 .padding(.horizontal)

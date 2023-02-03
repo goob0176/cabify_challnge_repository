@@ -46,6 +46,7 @@
 		B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */; };
 		B7868069298D23AC003819CA /* PriceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868068298D23AC003819CA /* PriceControl.swift */; };
 		B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */; };
+		B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806E298D4B1E003819CA /* PriceFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModelTests.swift; sourceTree = "<group>"; };
 		B7868068298D23AC003819CA /* PriceControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControl.swift; sourceTree = "<group>"; };
 		B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControlSnapshotTests.swift; sourceTree = "<group>"; };
+		B786806E298D4B1E003819CA /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				B76DAF94298A980E003C4099 /* Color+Ex.swift */,
 				B76DAF84298970CB003C4099 /* Localization.swift */,
+				B786806E298D4B1E003819CA /* PriceFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
 				B76DAF85298970CB003C4099 /* Localization.swift in Sources */,
 				B7868069298D23AC003819CA /* PriceControl.swift in Sources */,
+				B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */,
 				B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

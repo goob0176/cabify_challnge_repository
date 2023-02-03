@@ -8,9 +8,6 @@
 import Foundation
 
 protocol ProductRowType {
-    var code: String? { get }
-    var name: String? { get }
-    var price: String? { get }
-    
-    static func from(_ product: ProductModel) -> Self
+    var title: String { get }
+    var formattedPrice: String { get }
 }

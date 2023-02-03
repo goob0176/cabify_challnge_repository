@@ -10,22 +10,13 @@ import XCTest
 
 final class ProductRowViewModelTests: XCTestCase {
     func testViewModelDefaultInitializer() {
-        let viewModel: ProductRowType = ProductRowViewModel(
-            code: "VOUCHER",
-            name: "Cabify Voucher",
-            price: "30 €"
-        )
+        let viewModelFirst: ProductRowType = ProductRowViewModel(product: MocksFactory.models()[0])
+        let viewModelLast: ProductRowType = ProductRowViewModel(product: MocksFactory.models()[2])
+
+        XCTAssertEqual(viewModelFirst.title, "Cabify Voucher")
+        XCTAssertEqual(viewModelFirst.formattedPrice, "5,00 €")
         
-        XCTAssertEqual(viewModel.code, "VOUCHER")
-        XCTAssertEqual(viewModel.name, "Cabify Voucher")
-        XCTAssertEqual(viewModel.price, "30 €")
-    }
-    
-    func testViewModelFromProductInitializer() {
-        let viewModel: ProductRowType = ProductRowViewModel.from(MocksFactory.models()[0])
-        
-        XCTAssertEqual(viewModel.code, "VOUCHER")
-        XCTAssertEqual(viewModel.name, "Cabify Voucher")
-        XCTAssertEqual(viewModel.price, "5 €")
+        XCTAssertEqual(viewModelLast.title, "Cabify Coffee Mug")
+        XCTAssertEqual(viewModelLast.formattedPrice, "7,50 €")
     }
 }
