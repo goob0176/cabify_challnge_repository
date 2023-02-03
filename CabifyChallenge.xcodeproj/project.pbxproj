@@ -47,6 +47,8 @@
 		B7868069298D23AC003819CA /* PriceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868068298D23AC003819CA /* PriceControl.swift */; };
 		B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */; };
 		B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806E298D4B1E003819CA /* PriceFormatter.swift */; };
+		B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */; };
+		B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		B7868068298D23AC003819CA /* PriceControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControl.swift; sourceTree = "<group>"; };
 		B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControlSnapshotTests.swift; sourceTree = "<group>"; };
 		B786806E298D4B1E003819CA /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
+		B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferBadgeView.swift; sourceTree = "<group>"; };
+		B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferBadgeViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
 				B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */,
 				B786806D298D3889003819CA /* ControlsTests */,
+				B7868074298D5536003819CA /* RowViewsTests */,
 			);
 			path = CatalogueViews;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				B786805A298C1520003819CA /* ProductRow.swift */,
+				B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -407,6 +413,14 @@
 				B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */,
 			);
 			path = ControlsTests;
+			sourceTree = "<group>";
+		};
+		B7868074298D5536003819CA /* RowViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */,
+			);
+			path = RowViewsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,6 +582,7 @@
 				B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */,
 				B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */,
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
+				B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */,
 				B76DAF85298970CB003C4099 /* Localization.swift in Sources */,
 				B7868069298D23AC003819CA /* PriceControl.swift in Sources */,
 				B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */,
@@ -579,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */,
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */,
 				B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */,
