@@ -11,7 +11,7 @@ import Combine
 
 // MARK: - Constants
 
-fileprivate struct MockConstants {
+private struct MockConstants {
     static let url = "https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json"
     
     static let serverErrorUrl = "https://httpstat.us/500"

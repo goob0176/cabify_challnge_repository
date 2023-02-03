@@ -205,10 +205,8 @@
 		B76DAF7329891E21003C4099 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */,
-				B76DAF7629891FC5003C4099 /* NetworkService.swift */,
-				B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */,
-				B76DAF7F29896513003C4099 /* NetworkError.swift */,
+				B7868078298D6980003819CA /* DataService */,
+				B7868077298D6975003819CA /* Errors */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -421,6 +419,24 @@
 				B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */,
 			);
 			path = RowViewsTests;
+			sourceTree = "<group>";
+		};
+		B7868077298D6975003819CA /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF7F29896513003C4099 /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		B7868078298D6980003819CA /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF7429891E37003C4099 /* DataServiceProtocol.swift */,
+				B76DAF7629891FC5003C4099 /* NetworkService.swift */,
+				B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

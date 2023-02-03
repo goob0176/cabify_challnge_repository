@@ -8,6 +8,20 @@
 import Foundation
 import SwiftUI
 
+// MARK: Constants
+
+private struct Constants {
+    struct PriceControl {
+        static let generalSpacing = 16.0
+        static let overallCornerRadius = 18.5
+    }
+    struct ControlButton {
+        static let font: Font = .system(size: 16.0, weight: .bold)
+        static let textPadding = 8.0
+        static let imageSide = 35.0
+    }
+}
+
 // MARK: Helper Types
 
 typealias QuantityChangedAction = (Int)->()
@@ -15,6 +29,7 @@ typealias QuantityChangedAction = (Int)->()
 private enum ControlButtonType: String {
     case plus
     case minus
+    case addToCart
 }
 
 // MARK: Control View
@@ -33,7 +48,7 @@ struct PriceControl: View {
     }
     
     var body: some View {
-        HStack(spacing: 16.0) {
+        HStack(spacing: Constants.PriceControl.generalSpacing) {
             if overallQuantity > 0 {
                 ControlButton(
                     type: .minus,
@@ -47,19 +62,16 @@ struct PriceControl: View {
                 )
                 .allowsHitTesting(overallQuantity > 0)
             }
-            Text("\(overallQuantity)")
-                .font(.system(size: 16.0))
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
-                .frame(width: 30.0)
             ControlButton(
-                type: .plus,
+                type: overallQuantity > 0 ? .plus : .addToCart,
                 action: {
                     overallQuantity += 1
                     onQuantityChaned(overallQuantity)
                 }
             )
         }
+        .background(Color.primaryColor)
+        .cornerRadius(Constants.PriceControl.overallCornerRadius)
     }
 }
 
@@ -81,23 +93,33 @@ private struct ControlButton: View {
         Button {
             action()
         } label: {
-            Image(systemName: type.rawValue)
-                .foregroundColor(.white)
-                .font(.system(size: 25.0, weight: .bold))
-                .frame(width: 35.0, height: 35.0)
-                .background(Color.primaryColor)
-                .clipShape(Circle())
+            if type == .addToCart {
+                Text(Localization.addToCartButtonTitle)
+                    .padding(Constants.ControlButton.textPadding)
+                    .foregroundColor(.white)
+                    .font(Constants.ControlButton.font)
+            } else {
+                Image(systemName: type.rawValue)
+                    .foregroundColor(.white)
+                    .font(Constants.ControlButton.font)
+                    .frame(
+                        width: Constants.ControlButton.imageSide,
+                        height: Constants.ControlButton.imageSide
+                    )
+                    .background(Color.primaryColor)
+                    .clipShape(Circle())
+            }
         }
-
+        
     }
 }
 
 // MARK: Previews
 
- struct PriceControlButtonPreviews: PreviewProvider {
+struct PriceControlButtonPreviews: PreviewProvider {
     static var previews: some View {
         PriceControl(
-            overallQuantity: .constant(3),
+            overallQuantity: .constant(2),
             onQuantityChaned: {_ in}
         )
     }

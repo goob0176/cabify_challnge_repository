@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+// MARK: Constants
+
+private struct Constants {
+    static let generalSpacing = 20.0
+    static let errorMessageScaleFactor = 0.8
+    static let overallBottomPadding = 50.0
+    static let generalFont: Font = .system(size: 20.0, weight: .bold)
+    static let errorEmojiFont: Font = .system(size: 64.0)
+    static let errorHeaderFont: Font = .system(size: 40.0, weight: .heavy)
+}
+
+// MARK: - View
+
 struct CatalogueErrorView: View {
     private let errorMessage: String
     private let refreshAction: ()->Void
@@ -26,16 +39,16 @@ struct CatalogueErrorView: View {
                 Spacer()
                 VStack {
                     Text(Localization.productsErrorEmg)
-                        .font(.system(size: 64.0))
-                    VStack(spacing: 20.0) {
+                        .font(Constants.errorEmojiFont)
+                    VStack(spacing: Constants.generalSpacing) {
                         Text(Localization.productsErrorHeader)
                             .foregroundColor(.white)
-                            .font(.system(size: 40.0, weight: .heavy))
+                            .font(Constants.errorHeaderFont)
                         Text(errorMessage)
                             .multilineTextAlignment(.center)
-                            .minimumScaleFactor(0.8)
+                            .minimumScaleFactor(Constants.errorMessageScaleFactor)
                             .foregroundColor(.white)
-                            .font(.system(size: 20.0, weight: .bold))
+                            .font(Constants.generalFont)
                             .padding(.horizontal)
                     }
                 }
@@ -46,18 +59,20 @@ struct CatalogueErrorView: View {
                         Text(Localization.errorButtonTitle)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.errorColor)
-                            .font(.system(size: 20.0, weight: .bold))
+                            .font(Constants.generalFont)
                             .padding()
                             .background(Color.white)
                             .clipShape(Capsule())
                     })
                 .padding(.horizontal)
-                .padding(.bottom, 50.0)
+                .padding(.bottom, Constants.overallBottomPadding)
             }
         }
         .ignoresSafeArea()
     }
 }
+
+// MARK: - Previews
 
 struct CatalogueErrorView_Previews: PreviewProvider {
     static var previews: some View {

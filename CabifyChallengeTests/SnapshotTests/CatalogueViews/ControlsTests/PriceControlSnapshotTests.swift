@@ -31,24 +31,4 @@ final class PriceControlSnapshotTests: XCTestCase {
             as: .image(on: .iPhone8, size: priceControl.view.intrinsicContentSize)
         )
     }
-    
-    func testPriceControlWithTenItems() {
-        let priceControl =  UIHostingController(
-            rootView: PriceControl(overallQuantity: .constant(10), onQuantityChaned: {_ in})
-        )
-        assertSnapshot(
-            matching: priceControl,
-            as: .image(on: .iPhone8, size: priceControl.view.intrinsicContentSize)
-        )
-    }
-    
-    func testPriceControlWithLargeNumber() {
-        let priceControl =  UIHostingController(
-            rootView: PriceControl(overallQuantity: .constant(9999), onQuantityChaned: {_ in})
-        )
-        assertSnapshot(
-            matching: priceControl,
-            as: .image(on: .iPhone8, size: priceControl.view.intrinsicContentSize)
-        )
-    }
 }

@@ -15,5 +15,8 @@
 
 "CATALOGUE_PRODUCTS_TITLE" = "Cabify's shop";
 
+"ITEMS_IN_CART_MSG" = "Items in cart:";
+"ADD_TO_CART_BUTTON_TITLE" = "Add to cart";
+
 "PRODUCTS_LOADING_HEADER_EMG" = "😎";
 "PRODUCTS_ERROR_EMG" = "🤒";

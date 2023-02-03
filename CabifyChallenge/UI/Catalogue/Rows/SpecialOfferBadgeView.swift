@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+// MARK: - Constants
+
+private struct Constants {
+    static let titleLineLimit = 1
+    static let titleMinimumScaleFactor = 0.8
+    static let titleFontSize = 14.0
+    static let titleVerticalPadding = 10.0
+    static let cornerRadius = 18.5
+    static let strokeLineWidth = 2.0
+}
+
+// MARK: - View
+
 struct SpecialOfferBadgeView: View {
     let width: CGFloat
     let title: String?
@@ -14,25 +27,27 @@ struct SpecialOfferBadgeView: View {
     var body: some View {
         Text(title ?? "")
             .frame(width: width)
-            .lineLimit(1)
-            .minimumScaleFactor(0.8)
+            .lineLimit(Constants.titleLineLimit)
+            .minimumScaleFactor(Constants.titleMinimumScaleFactor)
             .foregroundColor(.primaryColor)
-            .font(.system(size: 14.0, weight: .bold))
-            .padding(.vertical, 10.0)
+            .font(.system(size: Constants.titleFontSize, weight: .bold))
+            .padding(.vertical, Constants.titleVerticalPadding)
             .padding(.horizontal)
             .overlay(
                 RoundedRectangle(
-                    cornerRadius: 18.5
+                    cornerRadius: Constants.cornerRadius
                 )
                     .stroke(
                         Color.primaryColor,
-                        lineWidth: 2.0
+                        lineWidth: Constants.strokeLineWidth
                     )
             )
-            .background(Color.white.cornerRadius(18.5))
+            .background(Color.white.cornerRadius(Constants.cornerRadius))
             .opacity(title != nil ? 1.0 : 0.0)
     }
 }
+
+// MARK: - Preview
 
 struct SpecialOfferBadgeView_Previews: PreviewProvider {
     static var previews: some View {

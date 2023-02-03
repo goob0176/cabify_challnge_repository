@@ -14,11 +14,13 @@ struct CatalogueProductsView: View {
         self.products = products
     }
     
+    static private let kOffsetSpacerHeight = 16.0
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 Spacer()
-                    .frame(height: 16.0)
+                    .frame(height: Self.kOffsetSpacerHeight)
                 VStack(alignment: .leading) {
                     ForEach(products) { item in
                         ProductRow(

@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+// MARK: - Constants
+
+private struct Constants {
+    static let betweenSpacing = 100.0
+    static let headerFontSize = 64.0
+    static let messageFontSize = 34.0
+}
+
+// MARK: - View
+
 struct CatalogueLoadingView: View {
     private let isLoading: Bool
     
@@ -17,14 +27,14 @@ struct CatalogueLoadingView: View {
     var body: some View {
         ZStack {
             Color.primaryColor
-            VStack(spacing: 100.0) {
+            VStack(spacing: Constants.betweenSpacing) {
                 LoadingIndicator(isLoading: isLoading)
                 VStack(alignment: .leading) {
                     Text(Localization.productsLoadingHeaderEmg)
-                        .font(.system(size: 64))
+                        .font(.system(size: Constants.headerFontSize))
                     Text(Localization.productsLoadingMsg)
                         .foregroundColor(.white)
-                        .font(.system(size: 34.0, weight: .heavy))
+                        .font(.system(size: Constants.messageFontSize, weight: .heavy))
                 }
                 .padding(.horizontal)
             }
@@ -32,6 +42,8 @@ struct CatalogueLoadingView: View {
         .ignoresSafeArea()
     }
 }
+
+// MARK: - Previews
 
 struct CatalogueLoadingViewPreviews: PreviewProvider {
     static var previews: some View {
