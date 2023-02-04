@@ -15,7 +15,6 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
-    @ViewBuilder
     var body: some View {
         Group {
             switch viewModel.screenState {

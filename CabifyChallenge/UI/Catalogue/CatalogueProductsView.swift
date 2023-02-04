@@ -16,24 +16,42 @@ struct CatalogueProductsView: View {
     
     static private let kOffsetSpacerHeight = 16.0
     
+    @State
+    private var toggleAnim = false
+    
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
-                Spacer()
-                    .frame(height: Self.kOffsetSpacerHeight)
-                VStack(alignment: .leading) {
-                    ForEach(products) { item in
-                        ProductRow(
-                            viewModel: ProductRowViewModel(
-                                product: item
+            ZStack {
+                ScrollView(.vertical) {
+                    Spacer()
+                        .frame(height: Self.kOffsetSpacerHeight)
+                    VStack(alignment: .leading) {
+                        ForEach(products) { item in
+                            ProductRow(
+                                viewModel: ProductRowViewModel(
+                                    product: item
+                                )
                             )
-                        )
+                        }
+                        Button("Test") {
+                            withAnimation {
+                                toggleAnim.toggle()
+                            }
+                        }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
+                .navigationTitle(Localization.catalogueProductsTitle)
+                if toggleAnim {
+                    VStack {
+                        Spacer()
+                        OverallPurchasesView()
+                    }
+                    .transition(.move(edge: .bottom))
+                }
+                
             }
-            .frame(maxWidth: .infinity)
-            .navigationTitle(Localization.catalogueProductsTitle)
         }
     }
 }

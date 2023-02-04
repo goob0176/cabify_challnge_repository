@@ -32,7 +32,6 @@
 		B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */; };
 		B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D592987F380006FF457 /* CatalogueView.swift */; };
 		B77A2D5C2987F381006FF457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77A2D5B2987F381006FF457 /* Assets.xcassets */; };
-		B77A2D5F2987F381006FF457 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B77A2D5E2987F381006FF457 /* Preview Assets.xcassets */; };
 		B77A2D692987F382006FF457 /* ProductModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D682987F382006FF457 /* ProductModelTests.swift */; };
 		B77A2D732987F382006FF457 /* CabifyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D722987F382006FF457 /* CabifyChallengeUITests.swift */; };
 		B77A2D752987F382006FF457 /* CabifyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77A2D742987F382006FF457 /* CabifyChallengeUITestsLaunchTests.swift */; };
@@ -49,6 +48,10 @@
 		B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806E298D4B1E003819CA /* PriceFormatter.swift */; };
 		B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */; };
 		B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */; };
+		B786807A298D6E68003819CA /* PurchasesServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868079298D6E68003819CA /* PurchasesServiceType.swift */; };
+		B786807E298D6FDB003819CA /* PurchaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786807D298D6FDB003819CA /* PurchaseServiceTests.swift */; };
+		B7868081298D717F003819CA /* PurchasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868080298D717F003819CA /* PurchasesService.swift */; };
+		B7868083298D755C003819CA /* OverallPurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868082298D755C003819CA /* OverallPurchasesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,6 @@
 		B77A2D572987F380006FF457 /* CabifyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyChallengeApp.swift; sourceTree = "<group>"; };
 		B77A2D592987F380006FF457 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
 		B77A2D5B2987F381006FF457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B77A2D5E2987F381006FF457 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B77A2D642987F382006FF457 /* CabifyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CabifyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77A2D682987F382006FF457 /* ProductModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelTests.swift; sourceTree = "<group>"; };
 		B77A2D6E2987F382006FF457 /* CabifyChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CabifyChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,10 @@
 		B786806E298D4B1E003819CA /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
 		B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferBadgeView.swift; sourceTree = "<group>"; };
 		B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferBadgeViewSnapshotTests.swift; sourceTree = "<group>"; };
+		B7868079298D6E68003819CA /* PurchasesServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesServiceType.swift; sourceTree = "<group>"; };
+		B786807D298D6FDB003819CA /* PurchaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseServiceTests.swift; sourceTree = "<group>"; };
+		B7868080298D717F003819CA /* PurchasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesService.swift; sourceTree = "<group>"; };
+		B7868082298D755C003819CA /* OverallPurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallPurchasesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,7 @@
 			children = (
 				B7868078298D6980003819CA /* DataService */,
 				B7868077298D6975003819CA /* Errors */,
+				B786807B298D6F3E003819CA /* PurchasesService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,8 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				B76DAF94298A980E003C4099 /* Color+Ex.swift */,
-				B76DAF84298970CB003C4099 /* Localization.swift */,
 				B786806E298D4B1E003819CA /* PriceFormatter.swift */,
+				B76DAF84298970CB003C4099 /* Localization.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,24 +294,15 @@
 				B76DAF7229891E01003C4099 /* Models */,
 				B76DAF8B2989762B003C4099 /* ViewModels */,
 				B76DAF90298990DC003C4099 /* Utils */,
-				B77A2D5D2987F381006FF457 /* Preview Content */,
 				B76DAF93298A95F9003C4099 /* Factories */,
 			);
 			path = CabifyChallenge;
 			sourceTree = "<group>";
 		};
-		B77A2D5D2987F381006FF457 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B77A2D5E2987F381006FF457 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		B77A2D672987F382006FF457 /* CabifyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B77A2D842988083A006FF457 /* ServicesTest */,
+				B77A2D842988083A006FF457 /* ServicesTests */,
 				B77A2D832988082F006FF457 /* ModelTests */,
 				B76DAF88298972B8003C4099 /* ViewModelTests */,
 				B7419746298AE111004F38F9 /* SnapshotTests */,
@@ -330,13 +328,13 @@
 			path = ModelTests;
 			sourceTree = "<group>";
 		};
-		B77A2D842988083A006FF457 /* ServicesTest */ = {
+		B77A2D842988083A006FF457 /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
-				B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */,
-				B7868051298C04BD003819CA /* NetworkErrorTests.swift */,
+				B786807C298D6FAD003819CA /* NetworkServiceTests */,
+				B786807F298D6FE5003819CA /* PurchaseServiceTests */,
 			);
-			path = ServicesTest;
+			path = ServicesTests;
 			sourceTree = "<group>";
 		};
 		B7868057298C14BE003819CA /* CommonUI */ = {
@@ -356,6 +354,7 @@
 				B76DAF9A298AAB9E003C4099 /* CatalogueErrorView.swift */,
 				B76DAF96298A98EF003C4099 /* CatalogueLoadingView.swift */,
 				B786805C298C1525003819CA /* Rows */,
+				B7868085298D7586003819CA /* Purchases */,
 			);
 			path = Catalogue;
 			sourceTree = "<group>";
@@ -364,7 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				B786805A298C1520003819CA /* ProductRow.swift */,
-				B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */,
+				B7868084298D7576003819CA /* Controls */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -374,7 +373,6 @@
 			children = (
 				B786805E298C2E3D003819CA /* Screens */,
 				B7868061298C2E9D003819CA /* Rows */,
-				B786806A298D23B0003819CA /* PriceControl */,
 			);
 			path = Catalogue;
 			sourceTree = "<group>";
@@ -391,18 +389,10 @@
 		B7868061298C2E9D003819CA /* Rows */ = {
 			isa = PBXGroup;
 			children = (
-				B786805F298C2E93003819CA /* ProductRowViewModel.swift */,
 				B7868062298C2EB4003819CA /* ProductRowType.swift */,
+				B786805F298C2E93003819CA /* ProductRowViewModel.swift */,
 			);
 			path = Rows;
-			sourceTree = "<group>";
-		};
-		B786806A298D23B0003819CA /* PriceControl */ = {
-			isa = PBXGroup;
-			children = (
-				B7868068298D23AC003819CA /* PriceControl.swift */,
-			);
-			path = PriceControl;
 			sourceTree = "<group>";
 		};
 		B786806D298D3889003819CA /* ControlsTests */ = {
@@ -437,6 +427,49 @@
 				B76DAF9C298AB62B003C4099 /* MockNetworkService.swift */,
 			);
 			path = DataService;
+			sourceTree = "<group>";
+		};
+		B786807B298D6F3E003819CA /* PurchasesService */ = {
+			isa = PBXGroup;
+			children = (
+				B7868079298D6E68003819CA /* PurchasesServiceType.swift */,
+				B7868080298D717F003819CA /* PurchasesService.swift */,
+			);
+			path = PurchasesService;
+			sourceTree = "<group>";
+		};
+		B786807C298D6FAD003819CA /* NetworkServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF6E29891D0D003C4099 /* NetworkServiceTests.swift */,
+				B7868051298C04BD003819CA /* NetworkErrorTests.swift */,
+			);
+			path = NetworkServiceTests;
+			sourceTree = "<group>";
+		};
+		B786807F298D6FE5003819CA /* PurchaseServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				B786807D298D6FDB003819CA /* PurchaseServiceTests.swift */,
+			);
+			path = PurchaseServiceTests;
+			sourceTree = "<group>";
+		};
+		B7868084298D7576003819CA /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B7868068298D23AC003819CA /* PriceControl.swift */,
+				B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		B7868085298D7586003819CA /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				B7868082298D755C003819CA /* OverallPurchasesView.swift */,
+			);
+			path = Purchases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,7 +584,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B77A2D5F2987F381006FF457 /* Preview Assets.xcassets in Resources */,
 				B76DAF822989700E003C4099 /* Localizable.strings in Resources */,
 				B77A2D5C2987F381006FF457 /* Assets.xcassets in Resources */,
 			);
@@ -589,9 +621,12 @@
 				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
 				B7868060298C2E93003819CA /* ProductRowViewModel.swift in Sources */,
 				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
+				B7868083298D755C003819CA /* OverallPurchasesView.swift in Sources */,
 				B76DAF9B298AAB9E003C4099 /* CatalogueErrorView.swift in Sources */,
 				B76DAF9D298AB62B003C4099 /* MockNetworkService.swift in Sources */,
 				B786805B298C1520003819CA /* ProductRow.swift in Sources */,
+				B786807A298D6E68003819CA /* PurchasesServiceType.swift in Sources */,
+				B7868081298D717F003819CA /* PurchasesService.swift in Sources */,
 				B76DAF7529891E37003C4099 /* DataServiceProtocol.swift in Sources */,
 				B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */,
 				B7868063298C2EB4003819CA /* ProductRowType.swift in Sources */,
@@ -618,6 +653,7 @@
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
 				B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */,
 				B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */,
+				B786807E298D6FDB003819CA /* PurchaseServiceTests.swift in Sources */,
 				B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */,
 				B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */,
 				B77A2D692987F382006FF457 /* ProductModelTests.swift in Sources */,
@@ -770,7 +806,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CabifyChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -803,7 +838,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CabifyChallenge/Preview Content\"";
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -14,7 +14,7 @@ struct ProductModel: Decodable, Equatable {
 }
 
 extension ProductModel: Identifiable {
-    var id: UUID {
-        UUID()
+    var id: String {
+        code ?? UUID().uuidString
     }
 }
