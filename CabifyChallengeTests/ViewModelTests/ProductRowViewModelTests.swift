@@ -32,13 +32,13 @@ final class ProductRowViewModelTests: XCTestCase {
         XCTAssertEqual(tShirtModel.formattedPrice, "20,00 €")
         XCTAssertNotNil(tShirtModel.discountTitle)
         XCTAssertEqual(tShirtModel.discountTitle, "Buy 3 or more - get each for 19.00€ !")
-        XCTAssertNil(voucherModel.discountPrice)
+        XCTAssertNil(tShirtModel.discountPrice)
         XCTAssertNil(tShirtModel.freeUnitsMessage)
         
         XCTAssertEqual(mugModel.title, "Cabify Coffee Mug")
         XCTAssertEqual(mugModel.formattedPrice, "7,50 €")
         XCTAssertNil(mugModel.discountTitle)
-        XCTAssertNil(voucherModel.discountPrice)
+        XCTAssertNil(mugModel.discountPrice)
         XCTAssertNil(mugModel.freeUnitsMessage)
     }
     
