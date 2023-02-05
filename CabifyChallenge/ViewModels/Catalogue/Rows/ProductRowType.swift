@@ -9,6 +9,8 @@ import Foundation
 
 protocol ProductRowType: AnyObject, ObservableObject {
     var title: String { get }
+    var totalProducts: Int { get set }
+    var itemsInCartMessage: String { get }
     var formattedPrice: String { get }
     var discountTitle: String? { get }
     var discountPrice: String? { get set }

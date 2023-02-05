@@ -1,5 +1,5 @@
 //
-//  PriceControlSnapshotTests.swift
+//  CartControlSnapshotTests.swift
 //  CabifyChallengeTests
 //
 //  Created by Andrey Khlopotin on 03.02.2023.
@@ -11,8 +11,8 @@ import XCTest
 
 @testable import CabifyChallenge
 
-final class PriceControlSnapshotTests: XCTestCase {
-    func testPriceControlWithZeroItems() {
+final class CartControlSnapshotTests: XCTestCase {
+    func testCartControlWithZeroItems() {
         let priceControl =  UIHostingController(
             rootView: CartControl(overallQuantity: .constant(0), onQuantityChaned: {_ in})
         )
@@ -22,7 +22,7 @@ final class PriceControlSnapshotTests: XCTestCase {
         )
     }
     
-    func testPriceControlWithOneItem() {
+    func testCartControlWithOneItem() {
         let priceControl =  UIHostingController(
             rootView: CartControl(overallQuantity: .constant(1), onQuantityChaned: {_ in})
         )

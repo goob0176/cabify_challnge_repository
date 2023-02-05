@@ -14,7 +14,8 @@ private struct Constants {
     static let titlesStackSpacing = 7.0
     static let titleTopPadding = 6.0
     static let titleFontSize = 14.0
-    static let priceFontSize = 20.0
+    static let priceFont: Font = .system(size: 20.0, weight: .bold)
+    static let oldPriceFont: Font = .system(size: 16.0, weight: .medium)
     static let subtitleFontSize = 14.0
     static let horizontalPadding = 30.0
     static let verticalPadding = 10.0
@@ -37,9 +38,6 @@ struct ProductRow<ViewModel: ProductRowType>: View {
     @StateObject
     private var viewModel: ViewModel
     
-    @State
-    private var products = 0
-    
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -56,20 +54,37 @@ struct ProductRow<ViewModel: ProductRowType>: View {
                             .foregroundColor(.gray)
                             .font(.system(size: Constants.titleFontSize))
                             .padding(.top, Constants.titleTopPadding)
-                        Text(viewModel.formattedPrice)
-                            .font(.system(size: Constants.priceFontSize, weight: .bold))
-                            .lineLimit(Constants.priceLineLimit)
-                            .minimumScaleFactor(Constants.priceLabelMinimumScaleFactor)
+                        HStack {
+                            Text(viewModel.formattedPrice)
+                                .font(viewModel.discountPrice != nil ? Constants.oldPriceFont : Constants.priceFont)
+                                .strikethrough(viewModel.discountPrice != nil)
+                                .lineLimit(Constants.priceLineLimit)
+                                .minimumScaleFactor(Constants.priceLabelMinimumScaleFactor)
+                            if let discountPrice = viewModel.discountPrice {
+                                Text(discountPrice)
+                                    .foregroundColor(.primaryColor)
+                                    .font(Constants.priceFont)
+                                    .lineLimit(Constants.priceLineLimit)
+                                    .minimumScaleFactor(Constants.priceLabelMinimumScaleFactor)
+                            }
+                        }
                     }
                     Spacer()
                     CartControl(
-                        overallQuantity: $products,
-                        onQuantityChaned: {_ in}
+                        overallQuantity: $viewModel.totalProducts,
+                        onQuantityChaned: { viewModel.updateProducts($0) }
                     )
                 }
-                Text("\(Localization.itemsInCartMsg) \(products)")
-                    .foregroundColor(.gray)
-                    .font(.system(size: Constants.subtitleFontSize))
+                HStack {
+                    Text(viewModel.itemsInCartMessage)
+                        .foregroundColor(.gray)
+                        .font(.system(size: Constants.subtitleFontSize))
+                    if let freeUnitsMessage = viewModel.freeUnitsMessage {
+                        Text(freeUnitsMessage)
+                            .foregroundColor(.green)
+                            .font(.system(size: Constants.subtitleFontSize))
+                    }
+                }
             }
             .padding()
             .background(Color.primaryColor.opacity(Constants.backgroundOpacity))
@@ -101,7 +116,9 @@ struct ProductRow<ViewModel: ProductRowType>: View {
 struct ProductRowPreviews: PreviewProvider {
     static var previews: some View {
         ProductRow(
-            viewModel: ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[0])
+            viewModel: ViewModelsFactory.productRowViewModel(
+                product: MocksFactory.models()[1]
+            )
         )
     }
 }

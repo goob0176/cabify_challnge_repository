@@ -15,6 +15,9 @@ class ProductRowViewModel: ProductRowType {
     private let discountService: Discountable
     
     @Published
+    var totalProducts: Int = 0
+    
+    @Published
     var discountPrice: String?
     
     @Published
@@ -22,6 +25,10 @@ class ProductRowViewModel: ProductRowType {
     
     var title: String {
         product.name ?? ""
+    }
+    
+    var itemsInCartMessage: String {
+        "\(Localization.itemsInCartMsg) \(totalProducts)"
     }
     
     var discountTitle: String? {
@@ -44,6 +51,7 @@ class ProductRowViewModel: ProductRowType {
     
     func updateProducts(_ newNumber: Int) {
         applyDiscountIfNeeded(numberOfProducts: newNumber)
+        totalProducts = newNumber
     }
 }
 

@@ -23,6 +23,8 @@ final class ProductRowViewModelTests: XCTestCase {
     func testViewModelDefaultInitializer() {
         XCTAssertEqual(voucherModel.title, "Cabify Voucher")
         XCTAssertEqual(voucherModel.formattedPrice, "5,00 €")
+        XCTAssertEqual(voucherModel.totalProducts, 0)
+        XCTAssertEqual(voucherModel.itemsInCartMessage, "Items in cart: 0")
         XCTAssertNotNil(voucherModel.discountTitle)
         XCTAssertEqual(voucherModel.discountTitle, "Buy two - get one for free!")
         XCTAssertNil(voucherModel.discountPrice)
@@ -30,6 +32,8 @@ final class ProductRowViewModelTests: XCTestCase {
         
         XCTAssertEqual(tShirtModel.title, "Cabify T-Shirt")
         XCTAssertEqual(tShirtModel.formattedPrice, "20,00 €")
+        XCTAssertEqual(tShirtModel.totalProducts, 0)
+        XCTAssertEqual(tShirtModel.itemsInCartMessage, "Items in cart: 0")
         XCTAssertNotNil(tShirtModel.discountTitle)
         XCTAssertEqual(tShirtModel.discountTitle, "Buy 3 or more - get each for 19.00€ !")
         XCTAssertNil(tShirtModel.discountPrice)
@@ -37,6 +41,8 @@ final class ProductRowViewModelTests: XCTestCase {
         
         XCTAssertEqual(mugModel.title, "Cabify Coffee Mug")
         XCTAssertEqual(mugModel.formattedPrice, "7,50 €")
+        XCTAssertEqual(mugModel.totalProducts, 0)
+        XCTAssertEqual(mugModel.itemsInCartMessage, "Items in cart: 0")
         XCTAssertNil(mugModel.discountTitle)
         XCTAssertNil(mugModel.discountPrice)
         XCTAssertNil(mugModel.freeUnitsMessage)
@@ -46,7 +52,7 @@ final class ProductRowViewModelTests: XCTestCase {
         voucherModel.updateProducts(2)
         XCTAssertNil(voucherModel.discountPrice)
         XCTAssertNotNil(voucherModel.freeUnitsMessage)
-        XCTAssertEqual(voucherModel.freeUnitsMessage, "Free units: 1")
+        XCTAssertEqual(voucherModel.freeUnitsMessage, "Free vouchers: 1")
         
         voucherModel.updateProducts(1)
         XCTAssertNil(voucherModel.discountPrice)
@@ -55,7 +61,7 @@ final class ProductRowViewModelTests: XCTestCase {
         voucherModel.updateProducts(6)
         XCTAssertNil(voucherModel.discountPrice)
         XCTAssertNotNil(voucherModel.freeUnitsMessage)
-        XCTAssertEqual(voucherModel.freeUnitsMessage, "Free units: 3")
+        XCTAssertEqual(voucherModel.freeUnitsMessage, "Free vouchers: 3")
         
         voucherModel.updateProducts(0)
         XCTAssertNil(voucherModel.discountPrice)
@@ -81,6 +87,21 @@ final class ProductRowViewModelTests: XCTestCase {
         XCTAssertNil(tShirtModel.freeUnitsMessage)
         XCTAssertNil(tShirtModel.discountPrice)
         XCTAssertNil(tShirtModel.discountPrice)
+    }
+    
+    func testNumberOfItemsAndItemsInCartDescription() {
+        voucherModel.updateProducts(6)
+        tShirtModel.updateProducts(1)
+        mugModel.updateProducts(4)
+        
+        XCTAssertEqual(voucherModel.totalProducts, 6)
+        XCTAssertEqual(voucherModel.itemsInCartMessage, "Items in cart: 6")
+        
+        XCTAssertEqual(tShirtModel.totalProducts, 1)
+        XCTAssertEqual(tShirtModel.itemsInCartMessage, "Items in cart: 1")
+        
+        XCTAssertEqual(mugModel.totalProducts, 4)
+        XCTAssertEqual(mugModel.itemsInCartMessage, "Items in cart: 4")
     }
     
     func testMugViewModelDiscountApplications() {
