@@ -8,8 +8,9 @@
 import Foundation
 
 protocol PurchasesServiceType: AnyObject {
+    var store: [ProductModel] { get }
     var totalPrice: Float { get set }
-    var itemsPurchased: Int { get set }
     
-    func handlePurchases(_ products: [ProductModel])
+    func add(_ product: ProductModel)
+    func remove(_ product: ProductModel)
 }

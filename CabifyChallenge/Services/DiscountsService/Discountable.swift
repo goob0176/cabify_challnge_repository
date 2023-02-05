@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol Discountable {
+    var type: DiscountType? { get }
+}

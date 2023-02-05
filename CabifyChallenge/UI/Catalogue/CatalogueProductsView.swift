@@ -28,7 +28,7 @@ struct CatalogueProductsView: View {
                     VStack(alignment: .leading) {
                         ForEach(products) { item in
                             ProductRow(
-                                viewModel: ProductRowViewModel(
+                                viewModel: ViewModelsFactory.productRowViewModel(
                                     product: item
                                 )
                             )

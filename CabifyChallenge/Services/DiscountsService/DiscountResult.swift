@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DiscountResult {
+enum DiscountResult: Equatable {
     case voucherDiscount(freeUnits: Int)
     case tShirtDiscount(newPrice: Float)
     case noDiscount

@@ -78,8 +78,8 @@ struct ProductRow: View {
             )
             .overlay(
                 SpecialOfferBadgeView(
-                    width: proxy.size.width / 2,
-                    title: "Every third voucher off!"
+                    width: proxy.size.width / 1.5,
+                    title: viewModel.discountTitle
                 )
                 .position(
                     x: proxy.frame(in: .local).midX,
@@ -100,9 +100,7 @@ struct ProductRow: View {
 struct ProductRowPreviews: PreviewProvider {
     static var previews: some View {
         ProductRow(
-            viewModel: ProductRowViewModel(
-                product: MocksFactory.models()[0]
-            )
+            viewModel: ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[0])
         )
     }
 }

@@ -52,6 +52,12 @@
 		B786807E298D6FDB003819CA /* PurchaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786807D298D6FDB003819CA /* PurchaseServiceTests.swift */; };
 		B7868081298D717F003819CA /* PurchasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868080298D717F003819CA /* PurchasesService.swift */; };
 		B7868083298D755C003819CA /* OverallPurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868082298D755C003819CA /* OverallPurchasesView.swift */; };
+		B786D0E9298EACB5001E1F39 /* DiscountTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0E8298EACB5001E1F39 /* DiscountTypeTests.swift */; };
+		B786D0ED298FDC8F001E1F39 /* Discountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0EC298FDC8F001E1F39 /* Discountable.swift */; };
+		B786D0EF298FDCAA001E1F39 /* DiscountResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0EE298FDCAA001E1F39 /* DiscountResult.swift */; };
+		B786D0F1298FDCC9001E1F39 /* DiscountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0F0298FDCC9001E1F39 /* DiscountService.swift */; };
+		B786D0F3298FDEB9001E1F39 /* DiscountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0F2298FDEB9001E1F39 /* DiscountType.swift */; };
+		B786D0F5298FE24A001E1F39 /* DiscountServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786D0F4298FE24A001E1F39 /* DiscountServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +125,12 @@
 		B786807D298D6FDB003819CA /* PurchaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseServiceTests.swift; sourceTree = "<group>"; };
 		B7868080298D717F003819CA /* PurchasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesService.swift; sourceTree = "<group>"; };
 		B7868082298D755C003819CA /* OverallPurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallPurchasesView.swift; sourceTree = "<group>"; };
+		B786D0E8298EACB5001E1F39 /* DiscountTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountTypeTests.swift; sourceTree = "<group>"; };
+		B786D0EC298FDC8F001E1F39 /* Discountable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discountable.swift; sourceTree = "<group>"; };
+		B786D0EE298FDCAA001E1F39 /* DiscountResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountResult.swift; sourceTree = "<group>"; };
+		B786D0F0298FDCC9001E1F39 /* DiscountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountService.swift; sourceTree = "<group>"; };
+		B786D0F2298FDEB9001E1F39 /* DiscountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountType.swift; sourceTree = "<group>"; };
+		B786D0F4298FE24A001E1F39 /* DiscountServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +214,7 @@
 		B76DAF7229891E01003C4099 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B76DAF7A2989374A003C4099 /* CatalogueModel.swift */,
-				B77A2D812987F3A4006FF457 /* ProductModel.swift */,
+				B786D0E5298EAC12001E1F39 /* Server */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 		B76DAF7329891E21003C4099 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B786D0EB298FDC7C001E1F39 /* DiscountsService */,
 				B7868078298D6980003819CA /* DataService */,
 				B7868077298D6975003819CA /* Errors */,
 				B786807B298D6F3E003819CA /* PurchasesService */,
@@ -322,8 +334,7 @@
 		B77A2D832988082F006FF457 /* ModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				B77A2D682987F382006FF457 /* ProductModelTests.swift */,
-				B76DAF78298934C1003C4099 /* CatalogModelTests.swift */,
+				B786D0E7298EAC5A001E1F39 /* ServerModelsTests */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -331,6 +342,7 @@
 		B77A2D842988083A006FF457 /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
+				B786D0EA298EACCA001E1F39 /* DiscountServicesTests */,
 				B786807C298D6FAD003819CA /* NetworkServiceTests */,
 				B786807F298D6FE5003819CA /* PurchaseServiceTests */,
 			);
@@ -470,6 +482,44 @@
 				B7868082298D755C003819CA /* OverallPurchasesView.swift */,
 			);
 			path = Purchases;
+			sourceTree = "<group>";
+		};
+		B786D0E5298EAC12001E1F39 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				B76DAF7A2989374A003C4099 /* CatalogueModel.swift */,
+				B77A2D812987F3A4006FF457 /* ProductModel.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		B786D0E7298EAC5A001E1F39 /* ServerModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B77A2D682987F382006FF457 /* ProductModelTests.swift */,
+				B76DAF78298934C1003C4099 /* CatalogModelTests.swift */,
+			);
+			path = ServerModelsTests;
+			sourceTree = "<group>";
+		};
+		B786D0EA298EACCA001E1F39 /* DiscountServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B786D0E8298EACB5001E1F39 /* DiscountTypeTests.swift */,
+				B786D0F4298FE24A001E1F39 /* DiscountServiceTests.swift */,
+			);
+			path = DiscountServicesTests;
+			sourceTree = "<group>";
+		};
+		B786D0EB298FDC7C001E1F39 /* DiscountsService */ = {
+			isa = PBXGroup;
+			children = (
+				B786D0EC298FDC8F001E1F39 /* Discountable.swift */,
+				B786D0EE298FDCAA001E1F39 /* DiscountResult.swift */,
+				B786D0F0298FDCC9001E1F39 /* DiscountService.swift */,
+				B786D0F2298FDEB9001E1F39 /* DiscountType.swift */,
+			);
+			path = DiscountsService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,12 +663,14 @@
 				B76DAF95298A980E003C4099 /* Color+Ex.swift in Sources */,
 				B76DAF7729891FC5003C4099 /* NetworkService.swift in Sources */,
 				B76DAF8029896513003C4099 /* NetworkError.swift in Sources */,
+				B786D0EF298FDCAA001E1F39 /* DiscountResult.swift in Sources */,
 				B76DAF7B2989374A003C4099 /* CatalogueModel.swift in Sources */,
 				B76DAF8A29897496003C4099 /* CatalogueScreenType.swift in Sources */,
 				B7868056298C08BD003819CA /* MocksFactory.swift in Sources */,
 				B741974F298AF0A4004F38F9 /* AnimatableOpacityContainerView.swift in Sources */,
 				B7868054298C0749003819CA /* CatalogueProductsView.swift in Sources */,
 				B76DAF97298A98EF003C4099 /* CatalogueLoadingView.swift in Sources */,
+				B786D0F1298FDCC9001E1F39 /* DiscountService.swift in Sources */,
 				B7868060298C2E93003819CA /* ProductRowViewModel.swift in Sources */,
 				B77A2D5A2987F380006FF457 /* CatalogueView.swift in Sources */,
 				B7868083298D755C003819CA /* OverallPurchasesView.swift in Sources */,
@@ -631,6 +683,8 @@
 				B76DAF92298A95F1003C4099 /* ViewModelsFactory.swift in Sources */,
 				B7868063298C2EB4003819CA /* ProductRowType.swift in Sources */,
 				B76DAF8D29897657003C4099 /* CatalogueScreenViewModel.swift in Sources */,
+				B786D0ED298FDC8F001E1F39 /* Discountable.swift in Sources */,
+				B786D0F3298FDEB9001E1F39 /* DiscountType.swift in Sources */,
 				B76DAF99298A9F73003C4099 /* LoadingIndicator.swift in Sources */,
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
 				B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */,
@@ -648,12 +702,14 @@
 				B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */,
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */,
+				B786D0E9298EACB5001E1F39 /* DiscountTypeTests.swift in Sources */,
 				B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */,
 				B7419758298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift in Sources */,
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
 				B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */,
 				B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */,
 				B786807E298D6FDB003819CA /* PurchaseServiceTests.swift in Sources */,
+				B786D0F5298FE24A001E1F39 /* DiscountServiceTests.swift in Sources */,
 				B76DAF87298972B2003C4099 /* CatalogueScreenViewModelTests.swift in Sources */,
 				B7419745298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift in Sources */,
 				B77A2D692987F382006FF457 /* ProductModelTests.swift in Sources */,

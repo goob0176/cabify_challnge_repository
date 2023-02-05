@@ -10,9 +10,14 @@ import Foundation
 struct ProductRowViewModel: ProductRowType {
     private let product: ProductModel
     private let priceFormatter: PriceFormatterType
+    private let discountService: Discountable
     
     var title: String {
         product.name ?? ""
+    }
+    
+    var discountTitle: String? {
+        discountService.type?.discountTitle
     }
     
     var formattedPrice: String {
@@ -21,9 +26,11 @@ struct ProductRowViewModel: ProductRowType {
     
     init(
         product: ProductModel,
-        priceFormatter: PriceFormatterType = PriceFormatter()
+        priceFormatter: PriceFormatterType = PriceFormatter(),
+        discountService: Discountable
     ) {
         self.product = product
         self.priceFormatter = priceFormatter
+        self.discountService = discountService
     }
 }

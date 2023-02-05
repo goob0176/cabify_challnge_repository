@@ -6,30 +6,43 @@
 //
 
 import XCTest
+@testable import CabifyChallenge
 
 final class DiscountServiceTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testVoucherDiscounts() {
+        let voucherDiscountService = DiscountService(type: .voucher)
+        
+        let voucherResult0 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 0)
+        let voucherResult1 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 1)
+        let voucherResult2 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 2)
+        let voucherResult3 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 3)
+        let voucherResult4 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 4)
+        let voucherResult5 = voucherDiscountService.applyDiscountIfNeeded(productsPurchased: 5)
+        
+        XCTAssertEqual(voucherResult0, .noDiscount)
+        XCTAssertEqual(voucherResult1, .noDiscount)
+        XCTAssertEqual(voucherResult2, .voucherDiscount(freeUnits: 1))
+        XCTAssertEqual(voucherResult3, .voucherDiscount(freeUnits: 1))
+        XCTAssertEqual(voucherResult4, .voucherDiscount(freeUnits: 2))
+        XCTAssertEqual(voucherResult5, .voucherDiscount(freeUnits: 2))
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testTshirsDiscounts() {
+        let tShirtDiscountService = DiscountService(type: .tShirt)
+        
+        let zeroTshirtsResult = tShirtDiscountService.applyDiscountIfNeeded(productsPurchased: 0)
+        let tShirtNonDiscountableResult = tShirtDiscountService.applyDiscountIfNeeded(productsPurchased: 2)
+        let tShirtDiscountableResult = tShirtDiscountService.applyDiscountIfNeeded(productsPurchased: 3)
+        
+        XCTAssertEqual(zeroTshirtsResult, .noDiscount)
+        XCTAssertEqual(tShirtNonDiscountableResult, .noDiscount)
+        XCTAssertEqual(tShirtDiscountableResult, .tShirtDiscount(newPrice: 19.0))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testInvalidDiscountTypes() {
+        let tShirtDiscountService = DiscountService(type: DiscountType(rawValue: ""))
+        
+        let result = tShirtDiscountService.applyDiscountIfNeeded(productsPurchased: 3)
+        XCTAssertEqual(result, .noDiscount)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
