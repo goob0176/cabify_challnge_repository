@@ -10,7 +10,13 @@ import Foundation
 struct ProductModel: Decodable, Equatable {
     let code: String?
     let name: String?
-    let price: Float?
+    var price: Float?
+}
+
+extension ProductModel: Discountable {
+    mutating func updatePrice(_ newPrice: Float) {
+        price = newPrice
+    }
 }
 
 extension ProductModel: Identifiable {
