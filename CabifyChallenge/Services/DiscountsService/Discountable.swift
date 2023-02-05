@@ -9,4 +9,5 @@ import Foundation
 
 protocol Discountable {
     var type: DiscountType? { get }
+    func applyDiscountIfNeeded(productsPurchased: Int) -> DiscountResult
 }

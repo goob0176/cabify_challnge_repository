@@ -33,14 +33,15 @@ private struct Constants {
 
 // MARK: Views
 
-struct ProductRow: View {
-    private let viewModel: ProductRowType
+struct ProductRow<ViewModel: ProductRowType>: View {
+    @StateObject
+    private var viewModel: ViewModel
     
     @State
     private var products = 0
     
-    init(viewModel: ProductRowType) {
-        self.viewModel = viewModel
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -61,7 +62,7 @@ struct ProductRow: View {
                             .minimumScaleFactor(Constants.priceLabelMinimumScaleFactor)
                     }
                     Spacer()
-                    PriceControl(
+                    CartControl(
                         overallQuantity: $products,
                         onQuantityChaned: {_ in}
                     )

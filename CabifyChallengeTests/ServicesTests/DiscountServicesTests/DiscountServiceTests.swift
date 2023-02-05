@@ -40,7 +40,7 @@ final class DiscountServiceTests: XCTestCase {
     }
     
     func testInvalidDiscountTypes() {
-        let tShirtDiscountService = DiscountService(type: DiscountType(rawValue: ""))
+        let tShirtDiscountService = DiscountService(type: DiscountType(rawValue: "MUG"))
         
         let result = tShirtDiscountService.applyDiscountIfNeeded(productsPurchased: 3)
         XCTAssertEqual(result, .noDiscount)

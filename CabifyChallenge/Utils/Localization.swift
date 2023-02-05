@@ -21,6 +21,7 @@ struct Localization {
     static let addToCartButtonTitle = "ADD_TO_CART_BUTTON_TITLE".localized
     static let voucherDiscountTitle = "VOUCHER_DISCOUNT_TITLE".localized
     static let tshirtDiscountTitle = "TSHIRT_DISCOUNT_TITLE".localized
+    static let freeUnitsMsg = "FREE_UNITS_MSG".localized
 }
 
 private extension String {

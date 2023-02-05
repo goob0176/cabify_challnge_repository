@@ -34,7 +34,7 @@ private enum ControlButtonType: String {
 
 // MARK: Control View
 
-struct PriceControl: View {
+struct CartControl: View {
     @Binding
     private var overallQuantity: Int
     private let onQuantityChaned: QuantityChangedAction
@@ -118,7 +118,7 @@ private struct ControlButton: View {
 
 struct PriceControlButtonPreviews: PreviewProvider {
     static var previews: some View {
-        PriceControl(
+        CartControl(
             overallQuantity: .constant(2),
             onQuantityChaned: {_ in}
         )

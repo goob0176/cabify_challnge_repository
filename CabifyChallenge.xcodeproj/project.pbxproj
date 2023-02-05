@@ -43,7 +43,7 @@
 		B7868060298C2E93003819CA /* ProductRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786805F298C2E93003819CA /* ProductRowViewModel.swift */; };
 		B7868063298C2EB4003819CA /* ProductRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868062298C2EB4003819CA /* ProductRowType.swift */; };
 		B7868067298C2F96003819CA /* ProductRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */; };
-		B7868069298D23AC003819CA /* PriceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868068298D23AC003819CA /* PriceControl.swift */; };
+		B7868069298D23AC003819CA /* CartControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868068298D23AC003819CA /* CartControl.swift */; };
 		B786806C298D387E003819CA /* PriceControlSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */; };
 		B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786806E298D4B1E003819CA /* PriceFormatter.swift */; };
 		B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */; };
@@ -116,7 +116,7 @@
 		B786805F298C2E93003819CA /* ProductRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModel.swift; sourceTree = "<group>"; };
 		B7868062298C2EB4003819CA /* ProductRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowType.swift; sourceTree = "<group>"; };
 		B7868066298C2F96003819CA /* ProductRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowViewModelTests.swift; sourceTree = "<group>"; };
-		B7868068298D23AC003819CA /* PriceControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControl.swift; sourceTree = "<group>"; };
+		B7868068298D23AC003819CA /* CartControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartControl.swift; sourceTree = "<group>"; };
 		B786806B298D387E003819CA /* PriceControlSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceControlSnapshotTests.swift; sourceTree = "<group>"; };
 		B786806E298D4B1E003819CA /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
 		B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOfferBadgeView.swift; sourceTree = "<group>"; };
@@ -470,7 +470,7 @@
 		B7868084298D7576003819CA /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				B7868068298D23AC003819CA /* PriceControl.swift */,
+				B7868068298D23AC003819CA /* CartControl.swift */,
 				B7868070298D525D003819CA /* SpecialOfferBadgeView.swift */,
 			);
 			path = Controls;
@@ -689,7 +689,7 @@
 				B77A2D822987F3A4006FF457 /* ProductModel.swift in Sources */,
 				B7868071298D525D003819CA /* SpecialOfferBadgeView.swift in Sources */,
 				B76DAF85298970CB003C4099 /* Localization.swift in Sources */,
-				B7868069298D23AC003819CA /* PriceControl.swift in Sources */,
+				B7868069298D23AC003819CA /* CartControl.swift in Sources */,
 				B786806F298D4B1E003819CA /* PriceFormatter.swift in Sources */,
 				B77A2D582987F380006FF457 /* CabifyChallengeApp.swift in Sources */,
 			);

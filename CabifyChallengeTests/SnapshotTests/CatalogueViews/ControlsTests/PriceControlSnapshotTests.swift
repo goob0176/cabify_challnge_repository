@@ -14,7 +14,7 @@ import XCTest
 final class PriceControlSnapshotTests: XCTestCase {
     func testPriceControlWithZeroItems() {
         let priceControl =  UIHostingController(
-            rootView: PriceControl(overallQuantity: .constant(0), onQuantityChaned: {_ in})
+            rootView: CartControl(overallQuantity: .constant(0), onQuantityChaned: {_ in})
         )
         assertSnapshot(
             matching: priceControl,
@@ -24,7 +24,7 @@ final class PriceControlSnapshotTests: XCTestCase {
     
     func testPriceControlWithOneItem() {
         let priceControl =  UIHostingController(
-            rootView: PriceControl(overallQuantity: .constant(1), onQuantityChaned: {_ in})
+            rootView: CartControl(overallQuantity: .constant(1), onQuantityChaned: {_ in})
         )
         assertSnapshot(
             matching: priceControl,

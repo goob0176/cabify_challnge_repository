@@ -7,8 +7,12 @@
 
 import Foundation
 
-protocol ProductRowType {
+protocol ProductRowType: AnyObject, ObservableObject {
     var title: String { get }
     var formattedPrice: String { get }
     var discountTitle: String? { get }
+    var discountPrice: String? { get set }
+    var freeUnitsMessage: String? { get set }
+    
+    func updateProducts(_ newNumber: Int)
 }

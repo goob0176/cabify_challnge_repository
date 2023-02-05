@@ -18,7 +18,7 @@ private struct Constants {
 
 // MARK: - View Model
 
-final class CatalogueScreenViewModel: CatalogueScreenType, ObservableObject {
+final class CatalogueScreenViewModel: CatalogueScreenType {
     private let dataService: DataService
     private var cancellables = Set<AnyCancellable>()
     

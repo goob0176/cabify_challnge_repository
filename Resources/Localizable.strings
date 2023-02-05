@@ -21,5 +21,7 @@
 "VOUCHER_DISCOUNT_TITLE" = "Buy two - get one for free!";
 "TSHIRT_DISCOUNT_TITLE" = "Buy 3 or more - get each for 19.00€ !";
 
+"FREE_UNITS_MSG" = "Free units:";
+
 "PRODUCTS_LOADING_HEADER_EMG" = "😎";
 "PRODUCTS_ERROR_EMG" = "🤒";
