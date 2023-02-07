@@ -197,20 +197,20 @@
 			isa = PBXGroup;
 			children = (
 				B7419754298BBFF1004F38F9 /* CommonUI */,
-				B741974A298AE4CD004F38F9 /* CatalogueViews */,
+				B741974A298AE4CD004F38F9 /* Catalogue */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
-		B741974A298AE4CD004F38F9 /* CatalogueViews */ = {
+		B741974A298AE4CD004F38F9 /* Catalogue */ = {
 			isa = PBXGroup;
 			children = (
 				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
 				B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */,
-				B786806D298D3889003819CA /* ControlsTests */,
-				B7868074298D5536003819CA /* RowViewsTests */,
+				B786806D298D3889003819CA /* Controls */,
+				B7868074298D5536003819CA /* Rows */,
 			);
-			path = CatalogueViews;
+			path = Catalogue;
 			sourceTree = "<group>";
 		};
 		B741974B298AEAC6004F38F9 /* Frameworks */ = {
@@ -240,8 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				B7868058298C14CF003819CA /* Catalogue */,
-				B7868057298C14BE003819CA /* CommonUI */,
 				B7FF11D82992A80B002818A5 /* OrderCompletion */,
+				B7868057298C14BE003819CA /* CommonUI */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -259,9 +259,9 @@
 		B76DAF7329891E21003C4099 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B7868077298D6975003819CA /* Errors */,
 				B786D0EB298FDC7C001E1F39 /* DiscountsService */,
 				B7868078298D6980003819CA /* DataService */,
-				B7868077298D6975003819CA /* Errors */,
 				B786807B298D6F3E003819CA /* CheckoutService */,
 			);
 			path = Services;
@@ -279,7 +279,7 @@
 		B76DAF88298972B8003C4099 /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7FF11E52992B3E0002818A5 /* CatalogueScreen */,
+				B7FF11E52992B3E0002818A5 /* Catalogue */,
 				B7FF11E62992B3EB002818A5 /* ProductRow */,
 				B7FF11E72992B3F7002818A5 /* Checkout */,
 				B7FF11EA2992B4A9002818A5 /* OrderCompletion */,
@@ -340,9 +340,9 @@
 		B77A2D562987F380006FF457 /* CabifyChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				B76DAF7329891E21003C4099 /* Services */,
 				B76DAF7029891DC7003C4099 /* StartUp */,
 				B76DAF7129891DE3003C4099 /* UI */,
+				B76DAF7329891E21003C4099 /* Services */,
 				B76DAF7229891E01003C4099 /* Models */,
 				B76DAF8B2989762B003C4099 /* ViewModels */,
 				B76DAF90298990DC003C4099 /* Utils */,
@@ -448,21 +448,21 @@
 			path = Rows;
 			sourceTree = "<group>";
 		};
-		B786806D298D3889003819CA /* ControlsTests */ = {
+		B786806D298D3889003819CA /* Controls */ = {
 			isa = PBXGroup;
 			children = (
 				B786806B298D387E003819CA /* CartControlSnapshotTests.swift */,
 			);
-			path = ControlsTests;
+			path = Controls;
 			sourceTree = "<group>";
 		};
-		B7868074298D5536003819CA /* RowViewsTests */ = {
+		B7868074298D5536003819CA /* Rows */ = {
 			isa = PBXGroup;
 			children = (
 				B7868072298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift */,
 				B7FF11BA29900BC3002818A5 /* ProductRowsSnapshotTests.swift */,
 			);
-			path = RowViewsTests;
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		B7868077298D6975003819CA /* Errors */ = {
@@ -652,13 +652,13 @@
 			path = OrderCompletion;
 			sourceTree = "<group>";
 		};
-		B7FF11E52992B3E0002818A5 /* CatalogueScreen */ = {
+		B7FF11E52992B3E0002818A5 /* Catalogue */ = {
 			isa = PBXGroup;
 			children = (
 				B76DAF86298972B2003C4099 /* CatalogueScreenViewModelTests.swift */,
 				B7FF11CF299278E3002818A5 /* CatalogueProductsScreenViewModelTests.swift */,
 			);
-			path = CatalogueScreen;
+			path = Catalogue;
 			sourceTree = "<group>";
 		};
 		B7FF11E62992B3EB002818A5 /* ProductRow */ = {
