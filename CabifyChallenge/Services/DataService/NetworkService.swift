@@ -22,7 +22,7 @@ struct NetworkService: DataService {
             .tryMap({ output in
                 guard let httpResponce = output.response as? HTTPURLResponse,
                       httpResponce.statusCode == 200 else {
-                    throw NetworkError.serverError
+                    throw NetworkError.dataReceivingError(description: Localization.serverErrorMsg)
                 }
                 return output.data
             })

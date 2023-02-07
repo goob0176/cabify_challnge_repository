@@ -12,7 +12,7 @@ struct CabifyChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             CatalogueView(
-                viewModel: ViewModelsFactory.catalogueViewModel()
+                viewModel: ViewModelsFactory.catalogue()
             )
         }
     }

@@ -13,6 +13,7 @@ class ProductRowViewModel: ProductRowType {
     private let product: ProductModel
     private let priceFormatter: PriceFormatterType
     private let discountService: Discountable
+    let onCartItemUpdated: CartItemResponse
     
     @Published
     var totalProducts: Int = 0
@@ -42,30 +43,47 @@ class ProductRowViewModel: ProductRowType {
     init(
         product: ProductModel,
         priceFormatter: PriceFormatterType = PriceFormatter(),
-        discountService: Discountable
+        discountService: Discountable,
+        onCartItemUpdated: @escaping CartItemResponse
     ) {
         self.product = product
         self.priceFormatter = priceFormatter
         self.discountService = discountService
+        self.onCartItemUpdated = onCartItemUpdated
     }
     
     func updateProducts(_ newNumber: Int) {
-        applyDiscountIfNeeded(numberOfProducts: newNumber)
+        var overallDiscountValue = Float.zero
+        applyDiscountIfNeeded(numberOfProducts: newNumber, overallDiscountValue: &overallDiscountValue)
         totalProducts = newNumber
+        
+        let cartItem = CartItem(
+            code: product.code ?? "",
+            totalProducts: newNumber,
+            regularPrice: Float(newNumber) * (product.price ?? 0.0),
+            overallDiscount: overallDiscountValue
+        )
+        
+        onCartItemUpdated(cartItem)
     }
 }
 
 // MARK: Private implementation
 
 private extension ProductRowViewModel {
-    func applyDiscountIfNeeded(numberOfProducts: Int) {
-        let discountResult = discountService.applyDiscountIfNeeded(productsPurchased: numberOfProducts)
+    func applyDiscountIfNeeded(numberOfProducts: Int, overallDiscountValue: inout Float) {
+        let discountResult = discountService.applyDiscountIfNeeded(
+            productsPurchased: numberOfProducts,
+            pricePerUnit: product.price ?? 0.0
+        )
         
         switch discountResult {
-        case .voucherDiscount(let freeUnits):
+        case .voucherDiscount(let freeUnits, let discountValue):
             freeUnitsMessage = "\(Localization.freeUnitsMsg) \(freeUnits)"
-        case .tShirtDiscount(let newPrice):
+            overallDiscountValue = discountValue
+        case .tShirtDiscount(let newPrice, let discountValue):
             discountPrice = priceFormatter.format(newPrice)
+            overallDiscountValue = discountValue
         case .noDiscount:
             freeUnitsMessage = nil
             discountPrice = nil

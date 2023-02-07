@@ -13,11 +13,15 @@ final class ProductRowViewModelTests: XCTestCase {
     var tShirtModel: (any ProductRowType)!
     var mugModel: (any ProductRowType)!
     
+    var onVoucherCartItemUpdated: CartItemResponse?
+    var onTshirtCartItemUpdated: CartItemResponse?
+    var onMugCartItemUpdated: CartItemResponse?
+    
     override func setUpWithError() throws {
         try super.setUpWithError()
-         voucherModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[0])
-         tShirtModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[1])
-         mugModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[2])
+        voucherModel = MocksFactory.row(.voucher)
+        tShirtModel = MocksFactory.row(.tShirt)
+        mugModel = MocksFactory.row(.mug)
     }
     
     func testViewModelDefaultInitializer() {
@@ -110,10 +114,57 @@ final class ProductRowViewModelTests: XCTestCase {
         XCTAssertNil(mugModel.discountPrice)
     }
     
+    func testProducedCartItems() {
+        var voucherCartItem = CartItem.empty()
+        var tShirtCartItem = CartItem.empty()
+        var mugCartItem = CartItem.empty()
+        
+        let voucherModel = MocksFactory.row(.voucher) { voucher in
+            voucherCartItem = voucher
+        }
+        
+        let tShirtModel = MocksFactory.row(.tShirt) { tShirt in
+            tShirtCartItem = tShirt
+        }
+        
+        let mugModel = MocksFactory.row(.mug) { mug in
+            mugCartItem = mug
+        }
+        
+        voucherModel.updateProducts(6)
+        tShirtModel.updateProducts(4)
+        mugModel.updateProducts(5)
+        
+        XCTAssertEqual(voucherCartItem.totalProducts, 6)
+        XCTAssertEqual(voucherCartItem.regularPrice, 30.0)
+        XCTAssertEqual(voucherCartItem.overallDiscount, 15.0)
+        
+        XCTAssertEqual(tShirtCartItem.totalProducts, 4)
+        XCTAssertEqual(tShirtCartItem.regularPrice, 80.0)
+        XCTAssertEqual(tShirtCartItem.overallDiscount, 4.0)
+        
+        XCTAssertEqual(mugCartItem.totalProducts, 5)
+        XCTAssertEqual(mugCartItem.regularPrice, 37.5)
+        XCTAssertEqual(mugCartItem.overallDiscount, 0.0)
+    }
+    
     override func tearDownWithError() throws {
         voucherModel = nil
         tShirtModel = nil
         mugModel = nil
         try super.tearDownWithError()
+    }
+}
+
+// MARK: Private helpers
+
+private extension CartItem {
+    static func empty() -> Self {
+        CartItem(
+            code: "",
+            totalProducts: 0,
+            regularPrice: 0.0,
+            overallDiscount: 0.0
+        )
     }
 }

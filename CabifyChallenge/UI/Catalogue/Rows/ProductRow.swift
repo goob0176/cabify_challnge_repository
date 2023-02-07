@@ -116,9 +116,7 @@ struct ProductRow<ViewModel: ProductRowType>: View {
 struct ProductRowPreviews: PreviewProvider {
     static var previews: some View {
         ProductRow(
-            viewModel: ViewModelsFactory.productRowViewModel(
-                product: MocksFactory.models()[1]
-            )
+            viewModel: MocksFactory.row(.voucher)
         )
     }
 }

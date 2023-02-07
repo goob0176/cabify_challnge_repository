@@ -24,7 +24,11 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
                 }
             case .loadedCatalogue(catalogueModel: let catalogueModel):
                 AnimatableOpacityContainerView {
-                    CatalogueProductsView(products: catalogueModel.products ?? [])
+                    CatalogueProductsView(
+                        viewModel: ViewModelsFactory.catalogueProducts(
+                            catalogueModel.products ?? []
+                        )
+                    )
                 }
             case .error(error: let error):
                 AnimatableOpacityContainerView {
@@ -44,7 +48,7 @@ struct CatalogueView<ViewModel: CatalogueScreenType>: View {
 struct CatalogueViewPreviews: PreviewProvider {
     static var previews: some View {
         CatalogueView(
-            viewModel: ViewModelsFactory.catalogueViewModel(
+            viewModel: ViewModelsFactory.catalogue(
                 NetworkServiceMock(shouldFail: false)
             )
         )

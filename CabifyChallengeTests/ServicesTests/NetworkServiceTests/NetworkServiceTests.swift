@@ -13,8 +13,6 @@ import Combine
 
 private struct MockConstants {
     static let url = "https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json"
-    
-    static let serverErrorUrl = "https://httpstat.us/500"
     static let systemErrorDescription = "The data couldn’t be read because it isn’t in the correct format."
 }
 
@@ -55,16 +53,6 @@ final class NetworkServiceTest: XCTestCase {
         
         XCTAssertNotNil(error)
         XCTAssertEqual(error as? NetworkError, NetworkError.invalidUrl)
-    }
-    
-    func testResponceWithServerError() {
-        let publisher: AnyPublisher<CatalogueModel, NetworkError> = sut.request(MockConstants.serverErrorUrl)
-        var error: Error?
-
-        asyncWait(for: publisher) { error = $0 }
-        
-        XCTAssertNotNil(error)
-        XCTAssertEqual(error as? NetworkError, NetworkError.serverError)
     }
     
     func testResponceWithParsingError() {

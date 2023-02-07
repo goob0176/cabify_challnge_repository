@@ -9,7 +9,6 @@ import Foundation
 
 enum NetworkError: Equatable {
     case invalidUrl
-    case serverError
     case dataReceivingError(description: String)
 }
 
@@ -18,8 +17,6 @@ extension NetworkError: LocalizedError {
         switch self {
         case .invalidUrl:
             return Localization.invalidUrlErrorMsg
-        case .serverError:
-            return Localization.serverErrorMsg
         case .dataReceivingError(let description):
             return description
         }

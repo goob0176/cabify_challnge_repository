@@ -39,7 +39,7 @@ final class CatalogueScreenViewModelTest: XCTestCase {
                 
         switch sut.screenState {
         case .error(let networkError):
-            XCTAssertEqual(networkError, NetworkError.serverError)
+            XCTAssertEqual(networkError, NetworkError.invalidUrl)
         default:
             XCTFail("Networ error must be thrown!")
         }

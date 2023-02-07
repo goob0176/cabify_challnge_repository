@@ -13,11 +13,9 @@ final class NetworkErrorTests: XCTestCase {
     
     func testLocalizedDescriptionOfError() {
         let invalidUrlError = NetworkError.invalidUrl
-        let serverError = NetworkError.serverError
         let dataReceivingError = NetworkError.dataReceivingError(description: Self.kDataReceivingErrorDescription)
         
         XCTAssertEqual(invalidUrlError.localizedDescription, Localization.invalidUrlErrorMsg)
-        XCTAssertEqual(serverError.localizedDescription, Localization.serverErrorMsg)
         XCTAssertEqual(dataReceivingError.localizedDescription, Self.kDataReceivingErrorDescription)
     }
 }

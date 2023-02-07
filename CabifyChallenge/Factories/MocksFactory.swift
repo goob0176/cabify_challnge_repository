@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum ProductRowMockModel: Int {
+    case voucher
+    case tShirt
+    case mug
+}
+
 struct MocksFactory {
     static func models() -> [ProductModel] {
         [
@@ -14,5 +20,14 @@ struct MocksFactory {
             ProductModel(code: "TSHIRT", name: "Cabify T-Shirt", price: 20),
             ProductModel(code: "MUG", name: "Cabify Coffee Mug", price: 7.5),
         ]
+    }    
+    static func row(
+        _ type: ProductRowMockModel,
+        onVoucherCartItemUpdated: CartItemResponse? = nil
+    ) -> some ProductRowType {
+        ViewModelsFactory.productRow(
+            product: MocksFactory.models()[type.rawValue],
+            onCartItemUpdated: onVoucherCartItemUpdated ?? {_ in}
+        )
     }
 }

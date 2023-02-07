@@ -20,11 +20,11 @@ final class NetworkServiceMock: DataService {
             .tryMap({ model in
                 guard !shouldFail,
                       let output = model as? Output else {
-                    throw NetworkError.serverError
+                    throw NetworkError.invalidUrl
                 }
                 return output
             })
-            .mapError { _ in NetworkError.serverError }
+            .mapError { _ in NetworkError.invalidUrl }
             .eraseToAnyPublisher()
     }
 }

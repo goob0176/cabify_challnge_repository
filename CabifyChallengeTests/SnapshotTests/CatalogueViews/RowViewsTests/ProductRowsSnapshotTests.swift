@@ -12,20 +12,9 @@ import SnapshotTesting
 @testable import CabifyChallenge
 
 final class ProductRowsSnapshotTests: XCTestCase {
-    var voucherModel: ProductRowViewModel!
-    var tShirtModel: ProductRowViewModel!
-    var mugModel: ProductRowViewModel!
-    
-    override func setUpWithError() throws {
-        try super.setUpWithError()
-        voucherModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[0]) as? ProductRowViewModel
-        tShirtModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[1]) as? ProductRowViewModel
-        mugModel = ViewModelsFactory.productRowViewModel(product: MocksFactory.models()[2]) as? ProductRowViewModel
-    }
-    
     func testRowDefaultState() {
         let mugView =  UIHostingController(
-            rootView: ProductRow(viewModel: mugModel)
+            rootView: ProductRow(viewModel: MocksFactory.row(.mug))
         )
         
         assertSnapshot(
@@ -35,6 +24,7 @@ final class ProductRowsSnapshotTests: XCTestCase {
     }
     
     func testVoucherDiscountState() {
+        let voucherModel = MocksFactory.row(.voucher)
         let voucherView =  UIHostingController(
             rootView: ProductRow(viewModel: voucherModel)
         )
@@ -46,6 +36,7 @@ final class ProductRowsSnapshotTests: XCTestCase {
     }
     
     func testTshirtDiscountState() {
+        let tShirtModel = MocksFactory.row(.tShirt)
         let tShirtView =  UIHostingController(
             rootView: ProductRow(viewModel: tShirtModel)
         )
@@ -54,12 +45,5 @@ final class ProductRowsSnapshotTests: XCTestCase {
             matching: tShirtView,
             as: .image(on: .iPhone13)
         )
-    }
-
-    override func tearDownWithError() throws {
-        voucherModel = nil
-        tShirtModel = nil
-        mugModel = nil
-        try super.tearDownWithError()
     }
 }

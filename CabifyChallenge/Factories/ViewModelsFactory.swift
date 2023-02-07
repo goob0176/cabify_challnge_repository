@@ -9,16 +9,28 @@ import Foundation
 import SwiftUI
 
 struct ViewModelsFactory {
-    static func catalogueViewModel(_ networkService: DataService = NetworkService()) -> some CatalogueScreenType {
+    static func catalogue(_ networkService: DataService = NetworkService()) -> some CatalogueScreenType {
         CatalogueScreenViewModel(dataService: networkService)
     }
     
-    static func productRowViewModel(product: ProductModel) -> some ProductRowType {
+    static func catalogueProducts(_ products: [ProductModel]) -> some CatalogueProductsScreenType {
+        CatalogueProductsScreenViewModel(products: products)
+    }
+    
+    static func checkout(_ checkoutItem: CheckoutItem) -> some CheckoutViewModelType {
+        CheckoutViewModel(checkoutItem: checkoutItem)
+    }
+    
+    static func productRow(
+        product: ProductModel,
+        onCartItemUpdated: @escaping CartItemResponse
+    ) -> some ProductRowType {
         ProductRowViewModel(
             product: product,
             discountService: DiscountService(
                 type: DiscountType(rawValue: product.code ?? "")
-            )
+            ),
+            onCartItemUpdated: onCartItemUpdated
         )
     }
 }

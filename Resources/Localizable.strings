@@ -23,5 +23,12 @@
 
 "FREE_UNITS_MSG" = "Free vouchers:";
 
+"ITEMS_PURCHASED_MSG" = "Items purchased:";
+"YOUR_PRICE_MSG" = "Your price:";
+"OLD_PRICE_MSG" = "Old price:";
+"NEW_PRICE_MSG" = "New price:";
+"YOU_SAVE_MSG" = "You save:";
+"PURCHASE_BUTTON_TITLE" = "Purchase";
+
 "PRODUCTS_LOADING_HEADER_EMG" = "😎";
 "PRODUCTS_ERROR_EMG" = "🤒";

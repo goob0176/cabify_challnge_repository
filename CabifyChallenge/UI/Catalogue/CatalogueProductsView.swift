@@ -7,48 +7,61 @@
 
 import SwiftUI
 
-struct CatalogueProductsView: View {
-    private let products: [ProductModel]
+// MARK: - Constants
+
+private struct Constants {
+    static let topOffsetSpacerHeight = 16.0
+}
+
+// MARK: - View
+
+struct CatalogueProductsView<ViewModel: CatalogueProductsScreenType>: View {
+    @StateObject
+    private var viewModel: ViewModel
     
-    init(products: [ProductModel]) {
-        self.products = products
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
-    
-    static private let kOffsetSpacerHeight = 16.0
-    
-    @State
-    private var toggleAnim = false
     
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView(.vertical) {
                     Spacer()
-                        .frame(height: Self.kOffsetSpacerHeight)
+                        .frame(height: Constants.topOffsetSpacerHeight)
                     VStack(alignment: .leading) {
-                        ForEach(products) { item in
+                        ForEach(viewModel.products) { item in
                             ProductRow(
-                                viewModel: ViewModelsFactory.productRowViewModel(
-                                    product: item
+                                viewModel: ViewModelsFactory.productRow(
+                                    product: item,
+                                    onCartItemUpdated: { cartItem in
+                                        withAnimation {
+                                            viewModel.updateCart(with: cartItem)
+                                        }
+                                    }
                                 )
                             )
-                        }
-                        Button("Test") {
-                            withAnimation {
-                                toggleAnim.toggle()
-                            }
                         }
                     }
                     .padding(.horizontal)
                 }
                 .frame(maxWidth: .infinity)
                 .navigationTitle(Localization.catalogueProductsTitle)
-                if toggleAnim {
+                if let checkoutItem = viewModel.checkoutItem,
+                   checkoutItem.totalItems != 0 {
                     VStack {
                         Spacer()
-                        OverallPurchasesView()
+                        CheckoutView(
+                            viewModel: ViewModelsFactory.checkout(checkoutItem)
+                        )
                     }
-                    .transition(.move(edge: .bottom))
+                    .padding(.bottom)
+                    .transition(
+                        .asymmetric(
+                            insertion: .move(edge: .bottom),
+                            removal: .move(edge: .trailing)
+                        )
+                    )
                 }
                 
             }
@@ -56,8 +69,14 @@ struct CatalogueProductsView: View {
     }
 }
 
+// MARK: - Previews
+
 struct CatalogueProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        CatalogueProductsView(products: MocksFactory.models())
+        CatalogueProductsView(
+            viewModel: CatalogueProductsScreenViewModel(
+                products: MocksFactory.models()
+            )
+        )
     }
 }
