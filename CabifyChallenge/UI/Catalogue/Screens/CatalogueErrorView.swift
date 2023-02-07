@@ -53,19 +53,16 @@ struct CatalogueErrorView: View {
                     }
                 }
                 Spacer()
-                Button(
-                    action: refreshAction,
-                    label: {
-                        Text(Localization.errorButtonTitle)
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(.errorColor)
-                            .font(Constants.generalFont)
-                            .padding()
-                            .background(Color.white)
-                            .clipShape(Capsule())
-                    })
+                PrimaryButton(
+                    title: Localization.errorButtonTitle,
+                    textColor: .errorColor,
+                    action: refreshAction
+                )
                 .padding(.horizontal)
-                .padding(.bottom, Constants.overallBottomPadding)
+                .padding(
+                    .bottom,
+                    Constants.overallBottomPadding
+                )
             }
         }
         .ignoresSafeArea()

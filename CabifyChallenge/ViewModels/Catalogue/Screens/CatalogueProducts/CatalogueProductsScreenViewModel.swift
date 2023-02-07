@@ -9,9 +9,18 @@ import Foundation
 
 class CatalogueProductsScreenViewModel: CatalogueProductsScreenType {
     @Published
+    var showPurchaseCompletedScreen: Bool = false
+    
+    @Published
     var checkoutItem: CheckoutItem?
     
     let products: [ProductModel]
+    
+    var orderCodes: [String] {
+        cart
+            .filter { $0.totalProducts != 0 }
+            .map { $0.code }
+    }
 
     private var cart = [CartItem]()
     private let checkoutService: CheckoutServiceType

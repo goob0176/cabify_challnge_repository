@@ -52,7 +52,12 @@ struct CatalogueProductsView<ViewModel: CatalogueProductsScreenType>: View {
                     VStack {
                         Spacer()
                         CheckoutView(
-                            viewModel: ViewModelsFactory.checkout(checkoutItem)
+                            viewModel: ViewModelsFactory.checkout(
+                                checkoutItem,
+                                onPurchase: {
+                                    viewModel.showPurchaseCompletedScreen = true
+                                }
+                            )
                         )
                     }
                     .padding(.bottom)
@@ -64,6 +69,14 @@ struct CatalogueProductsView<ViewModel: CatalogueProductsScreenType>: View {
                     )
                 }
                 
+            }
+            .fullScreenCover(
+                isPresented: $viewModel.showPurchaseCompletedScreen
+            ) {
+                OrderCompletedView(
+                    viewModel: ViewModelsFactory.orderCompleted(viewModel.orderCodes),
+                    isActive: $viewModel.showPurchaseCompletedScreen
+                )
             }
         }
     }

@@ -12,4 +12,5 @@ protocol CheckoutViewModelType {
     var totalPrice: String { get }
     var discountValue: String { get }
     var priceWithDiscount: String { get }
+    var onPurchase: ()->Void { get }
 }

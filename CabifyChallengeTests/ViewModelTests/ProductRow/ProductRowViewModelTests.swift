@@ -13,10 +13,6 @@ final class ProductRowViewModelTests: XCTestCase {
     var tShirtModel: (any ProductRowType)!
     var mugModel: (any ProductRowType)!
     
-    var onVoucherCartItemUpdated: CartItemResponse?
-    var onTshirtCartItemUpdated: CartItemResponse?
-    var onMugCartItemUpdated: CartItemResponse?
-    
     override func setUpWithError() throws {
         try super.setUpWithError()
         voucherModel = MocksFactory.row(.voucher)

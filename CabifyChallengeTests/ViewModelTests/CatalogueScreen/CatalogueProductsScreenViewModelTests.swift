@@ -55,5 +55,6 @@ final class CatalogueProductsScreenViewModelTests: XCTestCase {
         XCTAssertEqual(sut.checkoutItem?.totalItems, 9)
         XCTAssertEqual(sut.checkoutItem?.totalPrice, 97.5)
         XCTAssertEqual(sut.checkoutItem?.totalDiscount, 8.0)
+        XCTAssertEqual(sut.orderCodes, ["VOUCHER", "TSHIRT", "MUG"])
     }
 }

@@ -30,5 +30,13 @@
 "YOU_SAVE_MSG" = "You save:";
 "PURCHASE_BUTTON_TITLE" = "Purchase";
 
+"ORDER_COMPLETED_HEADER" = "Your products are on the way:";
+"ORDER_COMPLETED_BUTTON_TITLE" =  "Got it!";
+
 "PRODUCTS_LOADING_HEADER_EMG" = "😎";
 "PRODUCTS_ERROR_EMG" = "🤒";
+
+"VOUCHER_EMG" = "🎫";
+"TSHIRT_EMG" = "👚";
+"MUG_EMG" = "☕️";
+

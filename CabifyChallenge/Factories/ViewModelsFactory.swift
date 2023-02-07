@@ -17,8 +17,15 @@ struct ViewModelsFactory {
         CatalogueProductsScreenViewModel(products: products)
     }
     
-    static func checkout(_ checkoutItem: CheckoutItem) -> some CheckoutViewModelType {
-        CheckoutViewModel(checkoutItem: checkoutItem)
+    static func orderCompleted(_ productCodes: [String]) -> some OrderCompletedType {
+        OrderCompletedViewModel(productCodes: productCodes)
+    }
+    
+    static func checkout(
+        _ checkoutItem: CheckoutItem,
+        onPurchase: @escaping ()->Void
+    ) -> some CheckoutViewModelType {
+        CheckoutViewModel(checkoutItem: checkoutItem, onPurchase: onPurchase)
     }
     
     static func productRow(

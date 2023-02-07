@@ -28,6 +28,11 @@ struct Localization {
     static let newPriceMsg = "NEW_PRICE_MSG".localized
     static let youSaveMsg = "YOU_SAVE_MSG".localized
     static let purchaseButtonTitle = "PURCHASE_BUTTON_TITLE".localized
+    static let orderCompletedHeader = "ORDER_COMPLETED_HEADER".localized
+    static let orderCompletedButtonTitle = "ORDER_COMPLETED_BUTTON_TITLE".localized
+    static let voucherEmg = "VOUCHER_EMG".localized
+    static let tShirtEmg = "TSHIRT_EMG".localized
+    static let mugEmg = "MUG_EMG".localized
 }
 
 private extension String {

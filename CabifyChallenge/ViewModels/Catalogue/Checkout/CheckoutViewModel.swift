@@ -29,14 +29,18 @@ struct CheckoutViewModel: CheckoutViewModelType {
         return priceFormatter.format(saveValue) ?? ""
     }
     
+    let onPurchase: () -> Void
+    
     private let checkoutItem: CheckoutItem
     private let priceFormatter: PriceFormatter
     
     init(
         checkoutItem: CheckoutItem,
-        priceFormatter: PriceFormatter = PriceFormatter()
+        priceFormatter: PriceFormatter = PriceFormatter(),
+        onPurchase: @escaping () -> Void = {}
     ) {
         self.checkoutItem = checkoutItem
         self.priceFormatter = priceFormatter
+        self.onPurchase = onPurchase
     }
 }

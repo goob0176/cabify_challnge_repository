@@ -21,7 +21,11 @@ private struct Constants {
 // MARK: - View
 
 struct CheckoutView: View {
-    let viewModel: CheckoutViewModelType
+    private let viewModel: CheckoutViewModelType
+    
+    init(viewModel: CheckoutViewModelType) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         HStack {
@@ -57,7 +61,7 @@ struct CheckoutView: View {
             }
             Spacer()
             Button {
-                
+                viewModel.onPurchase()
             } label: {
                 Text(Localization.purchaseButtonTitle)
                     .padding(Constants.textPadding)
