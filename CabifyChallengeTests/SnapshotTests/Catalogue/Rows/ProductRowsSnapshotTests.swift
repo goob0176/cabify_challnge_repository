@@ -17,7 +17,7 @@ final class ProductRowsSnapshotTests: XCTestCase, Snapshotable {
             rootView: ProductRow(
                 viewModel: MocksFactory.row(.mug)
             )
-            .frame(width: 300.0)
+            .frame(width: 350.0)
         )
         
         assertIfCurrentSimulatorIs3x()
@@ -33,7 +33,8 @@ final class ProductRowsSnapshotTests: XCTestCase, Snapshotable {
             rootView: ProductRow(
                 viewModel: voucherModel
             )
-            .frame(width: 300.0)
+            .frame(width: 350.0)
+            .offset(y: 20.0)
         )
         voucherModel.updateProducts(2)
         
@@ -50,7 +51,8 @@ final class ProductRowsSnapshotTests: XCTestCase, Snapshotable {
             rootView: ProductRow(
                 viewModel: tShirtModel
             )
-            .frame(width: 300.0)
+            .frame(width: 350.0)
+            .offset(y: 20.0)
         )
         tShirtModel.updateProducts(3)
         
