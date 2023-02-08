@@ -11,6 +11,7 @@ import SwiftUI
 
 private struct Constants {
     static let topOffsetSpacerHeight = 16.0
+    static let bottomOffsetSpacerHeight = 100.0
 }
 
 // MARK: - View
@@ -42,6 +43,8 @@ struct CatalogueProductsView<ViewModel: CatalogueProductsScreenType>: View {
                                 )
                             )
                         }
+                        Spacer()
+                            .frame(height: Constants.bottomOffsetSpacerHeight)
                     }
                     .padding(.horizontal)
                 }

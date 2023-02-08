@@ -11,7 +11,7 @@ import SnapshotTesting
 
 @testable import CabifyChallenge
 
-final class SpecialOfferBadgeViewSnapshotTests: XCTestCase {
+final class SpecialOfferBadgeViewSnapshotTests: XCTestCase, Snapshotable {
     func testBadgeViewGeneralState() {
         let generalView =  UIHostingController(
             rootView: SpecialOfferBadgeView(
@@ -19,9 +19,11 @@ final class SpecialOfferBadgeViewSnapshotTests: XCTestCase {
                 title: "Every third - off!"
             )
         )
+        
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: generalView,
-            as: .image(on: .iPhone8, size: generalView.view.intrinsicContentSize)
+            as: .image(size: generalView.view.intrinsicContentSize)
         )
     }
     
@@ -32,9 +34,11 @@ final class SpecialOfferBadgeViewSnapshotTests: XCTestCase {
                 title: "Every third t-shirt are sold for free!"
             )
         )
+        
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: generalView,
-            as: .image(on: .iPhone8, size: generalView.view.intrinsicContentSize)
+            as: .image(size: generalView.view.intrinsicContentSize)
         )
     }
     
@@ -45,9 +49,11 @@ final class SpecialOfferBadgeViewSnapshotTests: XCTestCase {
                 title: "Every third - off!"
             )
         )
+        
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: generalView,
-            as: .image(on: .iPhone8, size: generalView.view.intrinsicContentSize)
+            as: .image(size: generalView.view.intrinsicContentSize)
         )
     }
 }

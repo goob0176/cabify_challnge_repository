@@ -75,6 +75,7 @@
 		B7FF11DF2992AAE9002818A5 /* OrderEmpjiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11DE2992AAE9002818A5 /* OrderEmpjiType.swift */; };
 		B7FF11E32992B134002818A5 /* OrderEmojiTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11E22992B134002818A5 /* OrderEmojiTypeTests.swift */; };
 		B7FF11E92992B4A3002818A5 /* OrderCompletedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11E82992B4A3002818A5 /* OrderCompletedViewModelTests.swift */; };
+		B7FF11ED2992CB99002818A5 /* Snapshotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11EC2992CB99002818A5 /* Snapshotable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		B7FF11DE2992AAE9002818A5 /* OrderEmpjiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEmpjiType.swift; sourceTree = "<group>"; };
 		B7FF11E22992B134002818A5 /* OrderEmojiTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEmojiTypeTests.swift; sourceTree = "<group>"; };
 		B7FF11E82992B4A3002818A5 /* OrderCompletedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedViewModelTests.swift; sourceTree = "<group>"; };
+		B7FF11EC2992CB99002818A5 /* Snapshotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +359,7 @@
 				B77A2D832988082F006FF457 /* ModelTests */,
 				B76DAF88298972B8003C4099 /* ViewModelTests */,
 				B7419746298AE111004F38F9 /* SnapshotTests */,
+				B7FF11EE2993C059002818A5 /* TestUtils */,
 			);
 			path = CabifyChallengeTests;
 			sourceTree = "<group>";
@@ -693,6 +696,14 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		B7FF11EE2993C059002818A5 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B7FF11EC2992CB99002818A5 /* Snapshotable.swift */,
+			);
+			path = TestUtils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -891,6 +902,7 @@
 				B7419758298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift in Sources */,
 				B76DAF6F29891D0D003C4099 /* NetworkServiceTests.swift in Sources */,
 				B786806C298D387E003819CA /* CartControlSnapshotTests.swift in Sources */,
+				B7FF11ED2992CB99002818A5 /* Snapshotable.swift in Sources */,
 				B7419756298BC005004F38F9 /* LoaderSnapshotTests.swift in Sources */,
 				B786807E298D6FDB003819CA /* CheckoutServiceTests.swift in Sources */,
 				B7FF11C62991185F002818A5 /* CartItemTests.swift in Sources */,

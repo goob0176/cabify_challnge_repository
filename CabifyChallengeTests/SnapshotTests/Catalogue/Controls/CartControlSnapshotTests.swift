@@ -11,24 +11,33 @@ import XCTest
 
 @testable import CabifyChallenge
 
-final class CartControlSnapshotTests: XCTestCase {
+final class CartControlSnapshotTests: XCTestCase, Snapshotable {
     func testCartControlWithZeroItems() {
         let priceControl =  UIHostingController(
-            rootView: CartControl(overallQuantity: .constant(0), onQuantityChaned: {_ in})
+            rootView: CartControl(
+                overallQuantity: .constant(0),
+                onQuantityChaned: {_ in})
         )
+
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: priceControl,
-            as: .image(on: .iPhone8, size: priceControl.view.intrinsicContentSize)
+            as: .image(size: priceControl.view.intrinsicContentSize)
         )
     }
     
     func testCartControlWithOneItem() {
         let priceControl =  UIHostingController(
-            rootView: CartControl(overallQuantity: .constant(1), onQuantityChaned: {_ in})
+            rootView: CartControl(
+                overallQuantity: .constant(1),
+                onQuantityChaned: {_ in}
+            )
         )
+
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: priceControl,
-            as: .image(on: .iPhone8, size: priceControl.view.intrinsicContentSize)
+            as: .image(size: priceControl.view.intrinsicContentSize)
         )
     }
 }

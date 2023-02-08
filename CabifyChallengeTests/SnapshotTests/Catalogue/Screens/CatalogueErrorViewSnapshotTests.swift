@@ -11,10 +11,16 @@ import XCTest
 
 @testable import CabifyChallenge
 
-class CatalogueErrorViewSnapshotTests: XCTestCase {
+class CatalogueErrorViewSnapshotTests: XCTestCase, Snapshotable {
     func testErrorView() {
-        let errorView =  UIHostingController(rootView: CatalogueErrorView(errorMessage: "Something went wrong", refreshAction: {}))
+        let errorView =  UIHostingController(
+            rootView: CatalogueErrorView(
+                errorMessage: "Something went wrong",
+                refreshAction: {}
+            )
+        )
         
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(matching: errorView, as: .image(on: .iPhone8))
         assertSnapshot(matching: errorView, as: .image(on: .iPhone13))
         assertSnapshot(matching: errorView, as: .image(on: .iPhone13ProMax))
@@ -34,8 +40,14 @@ class CatalogueErrorViewSnapshotTests: XCTestCase {
         we are glad to support you!
         """
         
-        let errorView =  UIHostingController(rootView: CatalogueErrorView(errorMessage: longErrorMessage, refreshAction: {}))
+        let errorView =  UIHostingController(
+            rootView: CatalogueErrorView(
+                errorMessage: longErrorMessage,
+                refreshAction: {}
+            )
+        )
         
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(matching: errorView, as: .image(on: .iPhone8))
         assertSnapshot(matching: errorView, as: .image(on: .iPhone13))
         assertSnapshot(matching: errorView, as: .image(on: .iPhone13ProMax))

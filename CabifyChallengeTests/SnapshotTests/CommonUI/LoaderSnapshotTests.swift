@@ -11,17 +11,18 @@ import XCTest
 
 @testable import CabifyChallenge
 
-class LoaderSnapshotTests: XCTestCase {
+class LoaderSnapshotTests: XCTestCase, Snapshotable {
     func testLoader() {
-        let loadingView =  UIHostingController(
+        let loadingView = UIHostingController(
             rootView: LoadingIndicator(
                 color: .blue,
                 isLoading: false
             )
         )
+        assertIfCurrentSimulatorIs3x()
         assertSnapshot(
             matching: loadingView,
-            as: .image(on: .iPhone8, size: loadingView.view.intrinsicContentSize)
+            as: .image(size: loadingView.view.intrinsicContentSize)
         )
     }
 }
