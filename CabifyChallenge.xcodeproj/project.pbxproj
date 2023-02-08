@@ -76,6 +76,7 @@
 		B7FF11E32992B134002818A5 /* OrderEmojiTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11E22992B134002818A5 /* OrderEmojiTypeTests.swift */; };
 		B7FF11E92992B4A3002818A5 /* OrderCompletedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11E82992B4A3002818A5 /* OrderCompletedViewModelTests.swift */; };
 		B7FF11ED2992CB99002818A5 /* Snapshotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11EC2992CB99002818A5 /* Snapshotable.swift */; };
+		B7FF11F02993D37E002818A5 /* CheckoutViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11EF2993D37E002818A5 /* CheckoutViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		B7FF11E22992B134002818A5 /* OrderEmojiTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEmojiTypeTests.swift; sourceTree = "<group>"; };
 		B7FF11E82992B4A3002818A5 /* OrderCompletedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedViewModelTests.swift; sourceTree = "<group>"; };
 		B7FF11EC2992CB99002818A5 /* Snapshotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotable.swift; sourceTree = "<group>"; };
+		B7FF11EF2993D37E002818A5 /* CheckoutViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				B7FF11EB2992BA0B002818A5 /* Screens */,
 				B786806D298D3889003819CA /* Controls */,
 				B7868074298D5536003819CA /* Rows */,
+				B7FF11F12993D385002818A5 /* Views */,
 			);
 			path = Catalogue;
 			sourceTree = "<group>";
@@ -704,6 +707,14 @@
 			path = TestUtils;
 			sourceTree = "<group>";
 		};
+		B7FF11F12993D385002818A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7FF11EF2993D37E002818A5 /* CheckoutViewSnapshotTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -892,6 +903,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FF11F02993D37E002818A5 /* CheckoutViewSnapshotTests.swift in Sources */,
 				B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */,
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */,
