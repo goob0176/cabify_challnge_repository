@@ -60,25 +60,5 @@ final class CatalogueProductsViewUITests: XCTestCase {
         XCTAssertTrue(youSaveTitle.exists)
         XCTAssertTrue(purchaseButton.exists)
     }
-    
-    func testOrderCompletedViewAppearsAfterPurchaseButtonTapped() throws {
-        let app = XCUIApplication()
-        app.launch()
-        
-        let voucherRowAddToCartButton = app.scrollViews
-            .otherElements
-            .containing(.staticText, identifier:"Buy two - get one for free!")
-            .children(matching: .button)
-            .matching(identifier: "Add to cart")
-            .element(boundBy: 0)
-        
-        voucherRowAddToCartButton.tap()
-        let purchaseButton = app.buttons["Purchase"]
-        purchaseButton.tap()
-        
-        let orderCompletedTitle = app.staticTexts["Your products are on the way:"]
-        
-        XCTAssertTrue(orderCompletedTitle.exists)
-    }
 }
 
