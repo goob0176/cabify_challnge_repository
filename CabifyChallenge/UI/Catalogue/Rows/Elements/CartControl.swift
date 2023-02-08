@@ -1,5 +1,5 @@
 //
-//  PriceControl.swift
+//  CartControl.swift
 //  CabifyChallenge
 //
 //  Created by Andrey Khlopotin on 03.02.2023.
@@ -11,7 +11,7 @@ import SwiftUI
 // MARK: Constants
 
 private struct Constants {
-    struct PriceControl {
+    struct CartControl {
         static let generalSpacing = 16.0
         static let overallCornerRadius = 18.5
     }
@@ -48,7 +48,7 @@ struct CartControl: View {
     }
     
     var body: some View {
-        HStack(spacing: Constants.PriceControl.generalSpacing) {
+        HStack(spacing: Constants.CartControl.generalSpacing) {
             if overallQuantity > 0 {
                 ControlButton(
                     type: .minus,
@@ -71,7 +71,7 @@ struct CartControl: View {
             )
         }
         .background(Color.primaryColor)
-        .cornerRadius(Constants.PriceControl.overallCornerRadius)
+        .cornerRadius(Constants.CartControl.overallCornerRadius)
     }
 }
 
