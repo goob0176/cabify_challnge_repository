@@ -78,6 +78,7 @@
 		B7FF11ED2992CB99002818A5 /* Snapshotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11EC2992CB99002818A5 /* Snapshotable.swift */; };
 		B7FF11F02993D37E002818A5 /* CheckoutViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11EF2993D37E002818A5 /* CheckoutViewSnapshotTests.swift */; };
 		B7FF11F32993D61C002818A5 /* OrderCompletedScreenSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11F22993D61C002818A5 /* OrderCompletedScreenSnapshotTests.swift */; };
+		B7FF11F62993EE86002818A5 /* CatalogueProductsViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF11F52993EE86002818A5 /* CatalogueProductsViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		B7FF11EC2992CB99002818A5 /* Snapshotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotable.swift; sourceTree = "<group>"; };
 		B7FF11EF2993D37E002818A5 /* CheckoutViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewSnapshotTests.swift; sourceTree = "<group>"; };
 		B7FF11F22993D61C002818A5 /* OrderCompletedScreenSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedScreenSnapshotTests.swift; sourceTree = "<group>"; };
+		B7FF11F52993EE86002818A5 /* CatalogueProductsViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueProductsViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +700,7 @@
 			children = (
 				B7419744298AE10B004F38F9 /* CatalogueErrorViewSnapshotTests.swift */,
 				B7419757298BC8B8004F38F9 /* CatalogueLoadingViewSnapshotTests.swift */,
+				B7FF11F52993EE86002818A5 /* CatalogueProductsViewSnapshotTests.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 			files = (
 				B7FF11F02993D37E002818A5 /* CheckoutViewSnapshotTests.swift in Sources */,
 				B7868073298D5428003819CA /* SpecialOfferBadgeViewSnapshotTests.swift in Sources */,
+				B7FF11F62993EE86002818A5 /* CatalogueProductsViewSnapshotTests.swift in Sources */,
 				B76DAF79298934C1003C4099 /* CatalogModelTests.swift in Sources */,
 				B7868052298C04BD003819CA /* NetworkErrorTests.swift in Sources */,
 				B7FF11D0299278E3002818A5 /* CatalogueProductsScreenViewModelTests.swift in Sources */,
