@@ -3,7 +3,7 @@ This is my solution to the [Cabify's take-home challenge.](https://github.com/ca
 
 I've designed and developed simple and user-friendly application which allows users to buy Cabify's products with different discounts:
 
-<img src="https://drive.google.com/uc?export=view&id=1s2tYSNewJSgrLYP0xyq342UdBKZtAf0r"  width=30% height=30%>
+<img src="https://drive.google.com/uc?export=view&id=152ePGgDJWtO_uYd6epF0URX_Ci7lziHg"  width=30% height=30%>
 
 General technical info:
 ---------------
