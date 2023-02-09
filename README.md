@@ -36,7 +36,7 @@ App starts with the ```CatalogueView``` which is configured with the view model 
 - ```error(error: NetworkError)```  Server request is finished with error, ```CatalogueErrorView``` is shown on screen with the corresponding error description.
 - ```.loadedCatalogue(catalogueModel: CatalogueModel)``` Catalogue with its products is properly loaded, ```CatalogueProductsView``` is on screen with all the loaded products.
 
-2. **Price and discount calculations for certain product type.**
+2. **Price and discount calculations for certain product type**
     Price and discounts are calculated within ```ProductRowViewModel```. Every time user adds or removes a certain product to a cart, ```updateProducts(_ newNumber: Int)``` function is called. Inside the function first the ```DiscountService``` service tries to apply a discount based on product's type and number of this products'type added. Then the ```CartItem``` instance is created and contains the number of the product's type purchased, overall price for them and overall discount value.
     
  3. **Overall price and discount calculations while checkout**
